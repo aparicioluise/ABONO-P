@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">ABONO</string>
+    <string name="hello_world_abono">Hello World ABONO!</string>
+    <string name="button">Button</string>
+    <string name="ca_cmol_kg_suelo">Ca (cmol+/kg_suelo)=</string>
+</resources>
