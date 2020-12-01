@@ -1,4 +1,4 @@
-package com.example.abono;
+package com.publico.abono;
 
 import org.junit.Test;
 

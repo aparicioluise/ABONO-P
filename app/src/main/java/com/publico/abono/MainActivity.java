@@ -1,4 +1,4 @@
-package com.example.abono;
+package com.publico.abono;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -62,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
                 PyObject nv09 = pyobj.callAttr("nv09");
                 PyObject nv10 = pyobj.callAttr("nv10");
                 PyObject nv11 = pyobj.callAttr("nv11");
+
 
                 Tx1.setText(nv00.toString()+"\n"+nv01.toString()+"\n"+nv02.toString()+"\n"+nv03.toString()
                     +"\n"+nv04.toString()+"\n"+nv05.toString()+"\n"+nv06.toString()+"\n"+nv07.toString()
