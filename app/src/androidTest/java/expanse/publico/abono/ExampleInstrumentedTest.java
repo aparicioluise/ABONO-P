@@ -1,4 +1,4 @@
-package com.publico.abono;
+package expanse.publico.abono;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

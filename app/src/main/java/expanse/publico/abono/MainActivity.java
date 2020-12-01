@@ -1,4 +1,4 @@
-package com.publico.abono;
+package expanse.publico.abono;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,6 +11,7 @@ import android.widget.Toast;
 import com.chaquo.python.PyObject;
 import com.chaquo.python.Python;
 import com.chaquo.python.android.AndroidPlatform;
+import expanse.publico.abono.R;
 
 public class MainActivity extends AppCompatActivity {
 

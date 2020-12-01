@@ -1,4 +1,4 @@
-package com.publico.abono;
+package expanse.publico.abono;
 
 import org.junit.Test;
 
