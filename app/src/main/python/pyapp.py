@@ -114,7 +114,6 @@ def intdata (cada,mgda,kda,nda,pda,feda,mnda,cuda,znda,sda,bda):
             factor= 0.4364
         if compuesto == "K2O":
             factor = 0.8301
-            entrok=1
         if compuesto == "CaO":
             factor = 0.7146
         if compuesto == "MgO":
@@ -444,6 +443,6 @@ print("NOTA IMPORTANTE:")
 print("Estas no son recomendaciones agronómicas, son solo cálculos matemáticos")
 print("basados en los datos introducidos a este código, que pudiera servir")
 print("como herramienta de cálculo durante las decisiones agronómicas")
-print("")
+print("CAMBIE Y SOLO LE DOY SYNCHRONIZE CHANGEES333")
 
 
