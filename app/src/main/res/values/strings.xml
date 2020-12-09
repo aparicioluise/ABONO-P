@@ -1,6 +1,12 @@
 <resources>
-    <string name="app_name">ABONO</string>
+    <string name="app_name">ABONO-dx</string>
     <string name="hello_world_abono">Hello World ABONO!</string>
     <string name="button">Button</string>
     <string name="ca_cmol_kg_suelo">Ca (cmol+/kg_suelo)=</string>
+    <string name="titulo">
+        <br>Para determinar la combinación matemática que produce el mínimo costo, entre un grupo de fertilizantes;</br>
+        <br>Ingrese a continuación los resultados de su estudio de suelo:</br>
+    </string>
+
+    <string name="nota"> NOTA IMPORTANTE: Estas no son recomendaciones agronómicas, son solo cálculos matemáticos basados en los datos introducidos a este Código, que pudiera servir como herramienta de cálculo durante las decisiones agronómicas</string>
 </resources>
