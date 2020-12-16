@@ -9,6 +9,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,6 +32,10 @@ public class MainActivity extends AppCompatActivity {
     ProgressBar Bar;
     private int prog=0;
     Handler handeler;
+
+    TableLayout tl_b;
+    RadioGroup rg_a;
+    RadioButton rb_a_1, rb_a_2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,8 +61,32 @@ public class MainActivity extends AppCompatActivity {
         Bar=(ProgressBar)findViewById(R.id.Bar);
         handeler=new Handler();
 
+        tl_b=(TableLayout)findViewById(R.id.tl_b);
+        rg_a=(RadioGroup)findViewById(R.id.rg_a);
+        rb_a_1=(RadioButton)findViewById(R.id.rb_a_1);
+        rb_a_2=(RadioButton)findViewById(R.id.rb_a_2);
+
         if (!Python.isStarted())
             Python.start(new AndroidPlatform(this));
+
+        tl_b.setVisibility(View.GONE);
+        rg_a.clearCheck();
+
+        rg_a.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group , int checkedId) {
+
+                if(checkedId==R.id.rb_a_1){
+                    tl_b.setVisibility(View.VISIBLE);
+                }
+                if(checkedId==R.id.rb_a_2){
+                    tl_b.setVisibility(View.GONE);
+                }
+            }
+        });
+
+        barra barra=new barra();
+        barra.execute();
 
 
         Btn.setOnClickListener(new View.OnClickListener() {
@@ -122,35 +153,8 @@ public class MainActivity extends AppCompatActivity {
                 Bar.setVisibility(View.VISIBLE);
                 prog=Bar.getProgress();
 
-
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                    while (prog<100)
-                    {
-                        prog++;
-                        handeler.post(new Runnable() {
-                            @Override
-                            public void run() {
-                                Bar.setProgress(prog);
-                            }
-                        });
-
-                        try {
-                            Thread.sleep(100);
-
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
-
-                    }
-                    }
-
-                });
-
                 time time=new time();
                 time.execute();
-
             }
         });
 
@@ -161,6 +165,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected Boolean doInBackground(Void... voids) {
+
 
             // Obtener valor ingresado
 
@@ -207,6 +212,8 @@ public class MainActivity extends AppCompatActivity {
 
                 @Override
                 public void run() {
+
+
                     final PyObject intdata = pyobj.callAttr("intdata", cada, mgda, kda, nda, pda, feda, mnda, cuda, znda, sda, bda);
                     // Stuff that updates the UI
                     datos = intdata.toString();
@@ -222,7 +229,8 @@ public class MainActivity extends AppCompatActivity {
                     text2.setText(R.string.nota);
                 }
             });
-           // texto();  "\n"+datos
+            //cambio();
+            // "\n"+datos
             return true;
         }
         @Override
@@ -231,12 +239,38 @@ public class MainActivity extends AppCompatActivity {
             Btn.setBackgroundColor(getResources().getColor(R.color.colorAccent2));
             Btn.setEnabled(true);
             Bar.setVisibility(View.INVISIBLE);
-
-
         }
     }
-    public void texto(){
 
+    public class barra extends AsyncTask<Void,Integer,Boolean> {
 
+        @Override
+        protected Boolean doInBackground(Void... voids) {
+
+                    while (prog<100)
+                    {
+                        prog++;
+                        handeler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                Bar.setProgress(prog);
+                            }
+                        });
+
+                        try {
+                            Thread.sleep(100);
+
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+
+            return true;
+        }
+        @Override
+        protected void onPostExecute(Boolean aBoolean) {
+
+        }
     }
 }
