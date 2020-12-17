@@ -26,6 +26,9 @@ public class MainActivity extends AppCompatActivity {
     Button Btn;
     TextView Tx1, text2;
     EditText caet, mget, ket, net, pet, feet, mnet, cuet, znet, set, bet;
+    EditText a1_nom, a1_cos, a1_ca, a1_mg, a1_k, a1_n,a1_p,a1_fe, a1_mn, a1_cu, a1_zn,a1_s, a1_b;
+    EditText a2_nom, a2_cos, a2_ca, a2_mg, a2_k, a2_n,a2_p,a2_fe, a2_mn, a2_cu, a2_zn,a2_s, a2_b;
+    EditText a3_nom, a3_cos, a3_ca, a3_mg, a3_k, a3_n,a3_p,a3_fe, a3_mn, a3_cu, a3_zn,a3_s, a3_b;
     String datos;
     String[] resultado;
     ArrayAdapter aa;
@@ -58,6 +61,48 @@ public class MainActivity extends AppCompatActivity {
         set=(EditText)findViewById(R.id.set);
         bet=(EditText)findViewById(R.id.bet);
 
+        a1_nom=(EditText)findViewById(R.id.a1_nom);
+        a1_cos=(EditText)findViewById(R.id.a1_cos);
+        a1_ca=(EditText)findViewById(R.id.a1_ca);
+        a1_mg=(EditText)findViewById(R.id.a1_mg);
+        a1_k=(EditText)findViewById(R.id.a1_k);
+        a1_n=(EditText)findViewById(R.id.a1_n);
+        a1_p=(EditText)findViewById(R.id.a1_p);
+        a1_fe=(EditText)findViewById(R.id.a1_fe);
+        a1_mn=(EditText)findViewById(R.id.a1_mn);
+        a1_cu=(EditText)findViewById(R.id.a1_cu);
+        a1_zn=(EditText)findViewById(R.id.a1_zn);
+        a1_s=(EditText)findViewById(R.id.a1_s);
+        a1_b=(EditText)findViewById(R.id.a1_b);
+
+        a2_nom=(EditText)findViewById(R.id.a2_nom);
+        a2_cos=(EditText)findViewById(R.id.a2_cos);
+        a2_ca=(EditText)findViewById(R.id.a2_ca);
+        a2_mg=(EditText)findViewById(R.id.a2_mg);
+        a2_k=(EditText)findViewById(R.id.a2_k);
+        a2_n=(EditText)findViewById(R.id.a2_n);
+        a2_p=(EditText)findViewById(R.id.a2_p);
+        a2_fe=(EditText)findViewById(R.id.a2_fe);
+        a2_mn=(EditText)findViewById(R.id.a2_mn);
+        a2_cu=(EditText)findViewById(R.id.a2_cu);
+        a2_zn=(EditText)findViewById(R.id.a2_zn);
+        a2_s=(EditText)findViewById(R.id.a2_s);
+        a2_b=(EditText)findViewById(R.id.a2_b);
+
+        a3_nom=(EditText)findViewById(R.id.a3_nom);
+        a3_cos=(EditText)findViewById(R.id.a3_cos);
+        a3_ca=(EditText)findViewById(R.id.a3_ca);
+        a3_mg=(EditText)findViewById(R.id.a3_mg);
+        a3_k=(EditText)findViewById(R.id.a3_k);
+        a3_n=(EditText)findViewById(R.id.a3_n);
+        a3_p=(EditText)findViewById(R.id.a3_p);
+        a3_fe=(EditText)findViewById(R.id.a3_fe);
+        a3_mn=(EditText)findViewById(R.id.a3_mn);
+        a3_cu=(EditText)findViewById(R.id.a3_cu);
+        a3_zn=(EditText)findViewById(R.id.a3_zn);
+        a3_s=(EditText)findViewById(R.id.a3_s);
+        a3_b=(EditText)findViewById(R.id.a3_b);
+
         Bar=(ProgressBar)findViewById(R.id.Bar);
         handeler=new Handler();
 
@@ -70,7 +115,8 @@ public class MainActivity extends AppCompatActivity {
             Python.start(new AndroidPlatform(this));
 
         tl_b.setVisibility(View.GONE);
-        rg_a.clearCheck();
+        //rg_a.clearCheck();
+
 
         rg_a.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -181,32 +227,34 @@ public class MainActivity extends AppCompatActivity {
             final String sda=String.valueOf(set.getText());
             final String bda=String.valueOf(bet.getText());
 
+
+            final String a1_nom_v=String.valueOf(a1_nom);
+            final String a1_cos_v=String.valueOf(a1_cos);
+            final String a1_ca_v=String.valueOf(a1_ca);
+            final String a1_mg_v=String.valueOf(a1_mg);
+            final String a1_k_v=String.valueOf(a1_k);
+            final String a1_n_v=String.valueOf(a1_n);
+            final String a1_p_v=String.valueOf(a1_p);
+            final String a1_fe_v=String.valueOf(a1_fe);
+            final String a1_mn_v=String.valueOf(a1_mn);
+            final String a1_cu_v=String.valueOf(a1_cu);
+            final String a1_zn_v=String.valueOf(a1_zn);
+            final String a1_s_v=String.valueOf(a1_s);
+            final String a1_b_v=String.valueOf(a1_b);
+
             // integracion python
 
             Python py= Python.getInstance();
+
             final PyObject pyobj = py.getModule("pyapp");
 
-            // Envio de data
+            if(rb_a_1.isSelected()){
+                // SI
+            }
+            else if (rb_a_2.isSelected()){
+                // NO
+            }
 
-
-
-            //                PyObject nv00 = pyobj.callAttr("nv00");
-            //                PyObject nv01 = pyobj.callAttr("nv01");
-            //                PyObject nv02 = pyobj.callAttr("nv02");
-            //                PyObject nv03 = pyobj.callAttr("nv03");
-            //                PyObject nv04 = pyobj.callAttr("nv04");
-            //                PyObject nv05 = pyobj.callAttr("nv05");
-            //                PyObject nv06 = pyobj.callAttr("nv06");
-            //                PyObject nv07 = pyobj.callAttr("nv07");
-            //                PyObject nv08 = pyobj.callAttr("nv08");
-            //                PyObject nv09 = pyobj.callAttr("nv09");
-            //                PyObject nv10 = pyobj.callAttr("nv10");
-            //                PyObject nv11 = pyobj.callAttr("nv11");
-
-
-            //nv00.toString()+"\n"+nv01.toString()+"\n"+nv02.toString()+"\n"+nv03.toString()
-            //                    +"\n"+nv04.toString()+"\n"+nv05.toString()+"\n"+nv06.toString()+"\n"+nv07.toString()
-            //                    +"\n"+nv08.toString()+"\n"+nv09.toString()+"\n"+nv10.toString()+"\n"+nv11.toString()
 
             runOnUiThread(new Runnable() {
 
@@ -214,7 +262,7 @@ public class MainActivity extends AppCompatActivity {
                 public void run() {
 
 
-                    final PyObject intdata = pyobj.callAttr("intdata", cada, mgda, kda, nda, pda, feda, mnda, cuda, znda, sda, bda);
+                    final PyObject intdata = pyobj.callAttr("intdata", cada, mgda, kda, nda, pda, feda, mnda, cuda, znda, sda, bda, a1_nom_v);
                     // Stuff that updates the UI
                     datos = intdata.toString();
                     String datos1=datos.replace("[", "").replace("]", "");

@@ -10,6 +10,7 @@ tools:context="expanse.publico.abono.MainActivity">
 <android.support.constraint.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:scrollbarAlwaysDrawHorizontalTrack="true"
     android:background="@color/backgraund1">
 
     <TextView
@@ -20,6 +21,7 @@ tools:context="expanse.publico.abono.MainActivity">
         android:layout_marginTop="16dp"
         android:justificationMode="inter_word"
         android:text=" "
+        android:gravity="center_horizontal"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -418,6 +420,7 @@ tools:context="expanse.publico.abono.MainActivity">
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:checked="true"
                     android:text="No" />
 
             </RadioGroup>
@@ -426,7 +429,7 @@ tools:context="expanse.publico.abono.MainActivity">
     </TableLayout>
 
     <TableLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tl_b"
         android:visibility="invisible"
@@ -439,8 +442,6 @@ tools:context="expanse.publico.abono.MainActivity">
         app:layout_constraintTop_toBottomOf="@+id/tl_a">
 
         <TableRow>
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/textView11"
@@ -455,9 +456,6 @@ tools:context="expanse.publico.abono.MainActivity">
         </TableRow>
 
         <TableRow>
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            >
 
             <TextView
                 android:id="@+id/textView12"
@@ -527,7 +525,7 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
                 android:ems="6"
-                android:text="0"
+                android:text="A"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -539,7 +537,7 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
                 android:ems="6"
-                android:text="0"
+                android:text="B"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -551,7 +549,7 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
                 android:ems="6"
-                android:text="0"
+                android:text="C"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

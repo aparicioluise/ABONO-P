@@ -32,7 +32,7 @@ znval=23.30
 sval=0
 bval=0
 
-def intdata (cada,mgda,kda,nda,pda,feda,mnda,cuda,znda,sda,bda):
+def intdata (cada,mgda,kda,nda,pda,feda,mnda,cuda,znda,sda,bda,a1_nom):
     
     #factor multiplicador del aporte objetivo
     multiplicador=2
@@ -72,6 +72,10 @@ def intdata (cada,mgda,kda,nda,pda,feda,mnda,cuda,znda,sda,bda):
     global znval
     global sval
     global bval
+
+    global a1_nom_v
+
+
     #global aporte_necesario
     #global cantidades
     #global iteraciones
@@ -102,6 +106,8 @@ def intdata (cada,mgda,kda,nda,pda,feda,mnda,cuda,znda,sda,bda):
     znval= int(float(znda))
     sval= int(float(sda))
     bval= int(float(bda))
+
+    a1_nom_v= str(a1_nom)
     
     def printdi(dictionary):
         t=""
@@ -431,12 +437,14 @@ def intdata (cada,mgda,kda,nda,pda,feda,mnda,cuda,znda,sda,bda):
         lista2.append(round(v*factor_efec,2))
    
     print(float(caval))
+
+    print("prueba" +str(a1_nom_v))
     
     
     return lista2
  
     
-intdata(1,1,1,1,1,1,1,1,1,1,1)
+intdata(1,1,1,1,1,1,1,1,1,1,1,1)
 
 print("")
 print("NOTA IMPORTANTE:")
