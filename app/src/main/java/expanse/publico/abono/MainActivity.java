@@ -242,6 +242,34 @@ public class MainActivity extends AppCompatActivity {
             final String a1_s_v=String.valueOf(a1_s);
             final String a1_b_v=String.valueOf(a1_b);
 
+            final String a2_nom_v=String.valueOf(a2_nom);
+            final String a2_cos_v=String.valueOf(a2_cos);
+            final String a2_ca_v=String.valueOf(a2_ca);
+            final String a2_mg_v=String.valueOf(a2_mg);
+            final String a2_k_v=String.valueOf(a2_k);
+            final String a2_n_v=String.valueOf(a2_n);
+            final String a2_p_v=String.valueOf(a2_p);
+            final String a2_fe_v=String.valueOf(a2_fe);
+            final String a2_mn_v=String.valueOf(a2_mn);
+            final String a2_cu_v=String.valueOf(a2_cu);
+            final String a2_zn_v=String.valueOf(a2_zn);
+            final String a2_s_v=String.valueOf(a2_s);
+            final String a2_b_v=String.valueOf(a2_b);
+
+            final String a3_nom_v=String.valueOf(a3_nom);
+            final String a3_cos_v=String.valueOf(a3_cos);
+            final String a3_ca_v=String.valueOf(a3_ca);
+            final String a3_mg_v=String.valueOf(a3_mg);
+            final String a3_k_v=String.valueOf(a3_k);
+            final String a3_n_v=String.valueOf(a3_n);
+            final String a3_p_v=String.valueOf(a3_p);
+            final String a3_fe_v=String.valueOf(a3_fe);
+            final String a3_mn_v=String.valueOf(a3_mn);
+            final String a3_cu_v=String.valueOf(a3_cu);
+            final String a3_zn_v=String.valueOf(a3_zn);
+            final String a3_s_v=String.valueOf(a3_s);
+            final String a3_b_v=String.valueOf(a3_b);
+
             // integracion python
 
             Python py= Python.getInstance();
@@ -261,9 +289,11 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void run() {
 
+                    // debe ser una cadena con 50 valores
 
                     final PyObject intdata = pyobj.callAttr("intdata", cada, mgda, kda, nda, pda, feda, mnda, cuda, znda, sda, bda, a1_nom_v);
                     // Stuff that updates the UI
+
                     datos = intdata.toString();
                     String datos1=datos.replace("[", "").replace("]", "");
 
