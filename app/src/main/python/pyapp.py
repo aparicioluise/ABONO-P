@@ -20,21 +20,20 @@ import numpy as np
 #'B':[0.05,0.25,0.35,0.35]   
 #}
 
-caval=8.57
-mgval=1.62
-kval=0.60
-nval=10.8
-pval=32.65
-feval=178.38
-mnval=23.85
-cuval=15.35
-znval=23.30
-sval=0
-bval=0
+#mgval=1.62
+#kval=0.60
+#nval=10.8
+#pval=32.65
+#feval=178.38
+#mnval=23.85
+#cuval=15.35
+#znval=23.30
+#sval=0
+#bval=0
 
 def intdata (cada,mgda,kda,nda,pda,feda,mnda,cuda,znda,sda,bda,a1_nom):
     
-    #factor multiplicador del aporte objetivo
+    #factor multiplicador del aporte objetivo a1_nom)
     multiplicador=2
     #cuantas fracciones del mayor de los abonos puede usarse en el minimo
     fracciones=3
@@ -95,17 +94,17 @@ def intdata (cada,mgda,kda,nda,pda,feda,mnda,cuda,znda,sda,bda,a1_nom):
 
     #global costo_efic
 
-    caval= int(float(cada))
-    mgval= int(float(mgda))
-    kval= int(float(kda))
-    nval= int(float(nda))
-    pval= int(float(pda))
-    feval= int(float(feda))
-    mnval= int(float(mnda))
-    cuval= int(float(cuda))
-    znval= int(float(znda))
-    sval= int(float(sda))
-    bval= int(float(bda))
+    caval= float(cada)
+    mgval= float(mgda)
+    kval= float(kda)
+    nval= float(nda)
+    pval= float(pda)
+    feval= float(feda)
+    mnval= float(mnda)
+    cuval= float(cuda)
+    znval= float(znda)
+    sval= float(sda)
+    bval= float(bda)
 
     a1_nom_v= str(a1_nom)
     
@@ -120,6 +119,7 @@ def intdata (cada,mgda,kda,nda,pda,feda,mnda,cuda,znda,sda,bda,a1_nom):
             factor= 0.4364
         if compuesto == "K2O":
             factor = 0.8301
+            entrok=1
         if compuesto == "CaO":
             factor = 0.7146
         if compuesto == "MgO":
@@ -276,7 +276,7 @@ def intdata (cada,mgda,kda,nda,pda,feda,mnda,cuda,znda,sda,bda,a1_nom):
     #modificar contenidos para considerar que son porcentajes
     for abono, contenido in a.items():
         for nutriente in contenido.keys():
-           a[abono][nutriente]/=100
+            a[abono][nutriente]/=100
            
     #MODIFICAR contenidos definidos en terminos de moleculas
     for abono, contenido in a.items():
@@ -408,7 +408,6 @@ def intdata (cada,mgda,kda,nda,pda,feda,mnda,cuda,znda,sda,bda,a1_nom):
     print(costo_unitario)
     aporte_factorado={}
     
-    
     for k in aporte_acumulado.keys():  
         for abono in a.keys():
             contenido_nut=a[abono]     
@@ -436,15 +435,12 @@ def intdata (cada,mgda,kda,nda,pda,feda,mnda,cuda,znda,sda,bda,a1_nom):
         lista1.append(k)
         lista2.append(round(v*factor_efec,2))
    
-    print(float(caval))
-
-    print("prueba" +str(a1_nom_v))
-    
+    print(str(caval))
     
     return lista2
  
     
-intdata(1,1,1,1,1,1,1,1,1,1,1,1)
+#intdata(8.57,1.62,0.60,10.8,32.65,178.38,23.85,15.35,23.30,0,0,0)
 
 print("")
 print("NOTA IMPORTANTE:")
