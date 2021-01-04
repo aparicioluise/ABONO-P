@@ -3,63 +3,8 @@
 #considerando un set de requerimientos de elementos
 #jose.gallardo@utp.ac.pa  octubre/2020
 
-import numpy as np
-
-#dosificacion_non-construccion={
-#'Ca':[0.05,0.25,0.35,0.35],
-#'Mg':[0.05,0.25,0.35,0.35],
-#'K':[0.05,0.25,0.35,0.35],
-#'P':[0.05,0.25,0.35,0.35],
-#'N':[0.05,0.25,0.35,0.35], 
-#'Fe':[0.05,0.25,0.35,0.35],
-#'Mn':[0.05,0.25,0.35,0.35],
-#'Cu':[0.05,0.25,0.35,0.35],
-#'Zn':[0.05,0.25,0.35,0.35],
-#'OM':[0.05,0.25,0.35,0.35], 
-#'S':[0.05,0.25,0.35,0.35], 
-#'B':[0.05,0.25,0.35,0.35]   
-#}
-
-#mgval=1.62
-#kval=0.60
-#nval=10.8
-#pval=32.65
-#feval=178.38
-#mnval=23.85
-#cuval=15.35
-#znval=23.30
-#sval=0
-#bval=0
-
 def intdata (cada,mgda,kda,nda,pda,feda,mnda,cuda,znda,sda,bda,a1_nom):
-    
-    #factor multiplicador del aporte objetivo a1_nom)
-    multiplicador=2
-    #cuantas fracciones del mayor de los abonos puede usarse en el minimo
-    fracciones=3
-    #producción estimada
-    produccion_kg_hcta=1800 #40 quintales/hectarea = 1800 kg/hectarea
 
-    kg_mol={'N':0.014,'Mg':0.0243,'P':0.031,'S':0.0321,'K':0.039,'Ca':0.0401,'Mn':0.0549,'Fe':0.0558,'Cu':0.0635,'Zn':0.0654}
-    eq_mol={'Mg':2,'K':1,'Ca':2}
-    
-    
-    #kilogramos estimados de nutrientes depleted por kg de producción
-    #fuente: 
-    nutriente_produccion={
-    'Ca':4.26/1000,#bot32.   wintgens para robusta menciona 'CaO':5.4
-    'Mg':2.26/1000,#bot32.   wintgens para robusta menciona 'MgO':4.2
-    'K': 36.92/1000,#bot32.   wintgens para robusta menciona K2O:44
-    'P':2.26/1000,#bot32.    wintgens para robusta menciona 'P2O5',6.1
-    'N':30.94/1000,#bot32  (wintgens para robusta menciona 33.4kg/1000kg_verde)
-    'S':1.21/1000,#, #bot32 
-    'Fe':107.29e-3/1000,#bot32 
-    'Mn':61.36e-3/1000,#bot32 
-    'Cu':33.02e-3/1000,#bot32 
-    'Zn':17.76e-3/1000,#bot32 
-    'B':49.79e-3/1000#bot32        
-    }
-    
     global caval
     global mgval
     global kval
@@ -74,25 +19,11 @@ def intdata (cada,mgda,kda,nda,pda,feda,mnda,cuda,znda,sda,bda,a1_nom):
 
     global a1_nom_v
 
+    lista1=[]
+    lista2=[]
+    lista3=[]
 
-    #global aporte_necesario
-    #global cantidades
-    #global iteraciones
-    #global aporte_acumulado
-    #global aporte_acumulado_temp
-    #global aporte_factorado  
-    #global costo_minimo
-    #global iterant
-    
-    #global abonos
-    #global nabonos 
-    #global can_ant
-    #global costo_unitario
-    #global costo_unitario_efic
-    global a
-    #global factor_efec
-
-    #global costo_efic
+    #_______________
 
     caval= float(cada)
     mgval= float(mgda)
@@ -107,19 +38,78 @@ def intdata (cada,mgda,kda,nda,pda,feda,mnda,cuda,znda,sda,bda,a1_nom):
     bval= float(bda)
 
     a1_nom_v= str(a1_nom)
-    
-    def printdi(dictionary):
-        t=""
-        for k,v in dictionary.items():
-            t+=k+":"+str(round(v,3))+" "
-        print(t)
 
+    #SECCION 0000000000000000000000000000000000000000000000000000000000000000000000
+    # DATOS CONSTANTES
+    costo_CaCO3_kg= 0.10
+    #densidad y espesor de la capa de suelo de inter�s
+    densidad=1200 #kg/m3
+    espesor=0.2 #m
+    #producción estimada
+    produccion_kg_ha=1800 #40 quintales/hectarea = 1800 kg/hectarea
+    #densidad (arboles por hectarea)
+    arb_ha=3000
+
+    fraccion_aprovechada=1
+    fraccion_existente_disponible={'Ca':1,
+    'Mg':1,
+    'K':1,
+    'P':1,
+    'N':1, 
+    'Fe':1,
+    'Mn':1,
+    'Cu':1,
+    'Zn':1,
+    'S':1, 
+    'B':1}
+    kg_mol={'N':0.014,'Mg':0.0243,'P':0.031,'S':0.0321,'K':0.039,
+            'Ca':0.0401,'Mn':0.0549,'Fe':0.0558,'Cu':0.0635,'Zn':0.0654}
+    eq_mol={'Mg':2,'K':1,'Ca':2}
+
+    def calcular_aporte_necesario(nut_lista,contenido_sugerido,contenido_existente,
+                                produccion_kg_ha,arb_ha,densidad,
+                                espesor):
+        construccion={}
+        consumo={}
+        mantenimiento =calcular_necesidad_mantenimiento(arb_ha)
+        produccion = calcular_necesidad_produccion(produccion_kg_ha)
+        print("------------------------------")
+        for nutriente in nut_lista:    
+            sugerido = kg_ha(nutriente,contenido_sugerido[nutriente],densidad,
+                            espesor)
+            existencia = kg_ha(nutriente,contenido_existente[nutriente],densidad,
+                            espesor)
+            deficiencia = max(0,sugerido-existencia)
+            disponible = (max(0,existencia-sugerido)*
+                        fraccion_existente_disponible[nutriente])
+            construccion[nutriente] = deficiencia  
+            mto=mantenimiento[nutriente]
+            pro=produccion[nutriente]
+            consumo[nutriente]=max(0,mto+pro-disponible)
+            print('-------------------------------')
+            print(nutriente)
+            print_rounded(" deficiencia:",deficiencia,
+                        "(sugerido:",sugerido,"existencia:",existencia,')')
+            print_rounded("consumo:",consumo[nutriente],'(mantenimimento:',mto,
+                        ' produccion:',pro,')', 'existencia disponible ',disponible)
+        return(construccion, consumo)
+
+    def print_rounded(*args):
+        text=""
+        for v in args:
+            if type(v)==float or type(v) == int:
+                text +=str(round(v,3))+" "
+            else:
+                text += v + " "
+        print(text)
+        
     def equiv(compuesto,peso):
         if compuesto == "P2O5":
             factor= 0.4364
         if compuesto == "K2O":
             factor = 0.8301
-            entrok=1
+        if compuesto == "KCl":
+            factor = 0.5244
         if compuesto == "CaO":
             factor = 0.7146
         if compuesto == "MgO":
@@ -128,47 +118,49 @@ def intdata (cada,mgda,kda,nda,pda,feda,mnda,cuda,znda,sda,bda,a1_nom):
             factor = 0.333
         return peso*factor
 
-    #función para transformar de diversas unidades a kilogramos por hectarea
-    def kg_hcta(elemento,contenido):
-        densidad=1200 #kg/m3
-        espesor=0.2 #m
+    #función para transformar de diversas unidades a kilogramos por 
+    #hectarea
+    def kg_ha(elemento,contenido, densidad, espesor):
         x=contenido['contenido']
         u=contenido['unidades']
-        kg_suelo_hcta=espesor*10000*densidad #kg/hcta
+        kg_suelo_ha=espesor*10000*densidad #kg/ha
         if u == 'meq%':
-            x *= 10/1000*eq_mol[elemento]*kg_mol[elemento]*kg_suelo_hcta
+            x *= 1/1000/100/eq_mol[elemento]*1000*100*kg_mol[elemento]*kg_suelo_ha/100
         if u =='cmol+/kg_suelo':
-            x *= kg_mol[elemento]/100*kg_suelo_hcta
+            x *= kg_mol[elemento]/eq_mol[elemento]/100*kg_suelo_ha
         if u =='mg/kg_suelo'or u=='ppm' or u=='ppm(Troug)':
-            x *= kg_suelo_hcta/1e6
+            x *= kg_suelo_ha/1e6
         if u =='ppm(Olsen-Davin)':
-            x *= kg_suelo_hcta/1e6*22/45
+            x *= kg_suelo_ha/1e6*22/45
         if u =='%':
-            x *= kg_suelo_hcta/100
+            x *= kg_suelo_ha/100
         if u =='mg/L':
             x *= 1e-6*(1000)*(espesor*10000)  #1000 L / metrocubico
         return(x)
 
-    costo_kg={
-    "Nitrabor":0.7,
-    "Rega":0.8,
-    "Polisulfato":0.6, 
-    "High_Complete":0.6,
-    "High_K":0.6,
-    "Granumax_S":0.5,
-    "Hydran":0.6,
-    "Colono_15-5-20":0.6, 
-    "DAP":0.6, 
-    "kicerita":0.6,
-    "dolomita":0.6,
-    "micromix_forte":0.8
-    }
-    
-    
+    def normalizar_composicion_de_abono(a):
+        for abono, contenido in a.items():
+            for nutriente in contenido.keys():
+                a[abono][nutriente]/=100
+        #MODIFICAR contenidos definidos en terminos de moleculas
+        for abono, contenido in a.items():
+            a[abono]["P"]=equiv("P2O5",a[abono]["P2O5"])  
+            del a[abono]["P2O5"]    
+            a[abono]["K"]=equiv("K2O",a[abono]["K2O"])
+            del a[abono]["K2O"]
+            a[abono]["Ca"]=equiv("CaO",a[abono]['CaO'])
+            del a[abono]['CaO']
+            a[abono]["Mg"]=equiv("MgO",a[abono]["MgO"])
+            del a[abono]["MgO"]
+            if 'SO4' in a[abono]:
+                a[abono]["S"]=equiv("SO4",a[abono]["SO4"])
+                del a[abono]["SO4"]
+        return(a)
+
     #Composición de cada tipo de abono (en porcentaje)
     a={
-    "Nitrabor":{"N":15,"P2O5":0,"K2O":0,"CaO":26,"MgO":0,"SO4":0,
-    "Zn":0,"B":0.3,"Fe":0,"Mn":0,"Cu":0},
+    "Nitrabor":{"N":15.45,"P2O5":0,"K2O":0,"CaO":25.5,"MgO":0,"SO4":0,
+    "Zn":0,"B":0.3,"Fe":0,"Mn":0,"Cu":0, },
 
     "Rega":{"N":20,"P2O5":5,"K2O":18,"CaO":0,"MgO":0,"SO4":2,
     "Zn":0.01,"B":0.04,"Fe":0,"Mn":0,"Cu":0},
@@ -200,25 +192,115 @@ def intdata (cada,mgda,kda,nda,pda,feda,mnda,cuda,znda,sda,bda,a1_nom):
     "dolomita":{"N":0,"P2O5":0,"K2O":0,"CaO":32.4,"MgO":18.2,"SO4":0,
     "Zn":0,"B":0,"Fe":0,"Mn":0,"Cu":0},
 
+    "enmienda1":{"N":0,"P2O5":0,"K2O":0,"CaO":30,"MgO":15,"SO4":15,
+    "Zn":0,"B":0,"Fe":0,"Mn":0,"Cu":0},
+
+    "KCL":{"N":0,"P2O5":0,"K2O":60,"CaO":0,"MgO":0,"SO4":0,
+    "Zn":0,"B":0,"Fe":0,"Mn":0,"Cu":0},
+
+    "KMAG":{"N":0,"P2O5":0,"K2O":22,"CaO":0,"MgO":18,"S":22,
+    "Zn":0,"B":0,"Fe":0,"Mn":0,"Cu":0},
+
+    "Urea x":{"N":46,"P2O5":0,"K2O":0,"CaO":0,"MgO":0,"SO4":0,
+    "Zn":0,"B":0,"Fe":0,"Mn":0,"Cu":0},
+
+    "Boro gra 9.9B":{"N":0,"P2O5":0,"K2O":0,"CaO":0,"MgO":0,"SO4":0,
+    "Zn":0,"B":9.9,"Fe":0,"Mn":0,"Cu":0},
+
+    "Magnesamon":{"N":21,"P2O5":0,"K2O":0,"CaO":11,"MgO":7.5,"SO4":0,
+    "Zn":0,"B":0,"Fe":0,"Mn":0,"Cu":0},
+
     "micromix_forte":{"N":3,"P2O5":3,"K2O":0,"CaO":2,"MgO":4,"SO4":15,
-    "Zn":12,"B":1.5,"Fe":3,"Mn":1,"Cu":1}
+    "Zn":12,"B":1.5,"Fe":3,"Mn":1,"Cu":1},
+
+    "ABONO1":{"N":0,"P2O5":0,"K2O":0,"CaO":0,"MgO":0,"SO4":0,
+    "Zn":0,"B":0,"Fe":0,"Mn":0,"Cu":0},
+
+    "ABONO2":{"N":0,"P2O5":0,"K2O":0,"CaO":0,"MgO":0,"SO4":0,
+    "Zn":0,"B":0,"Fe":0,"Mn":0,"Cu":0},
+
+    "ABONO3":{"N":0,"P2O5":0,"K2O":0,"CaO":0,"MgO":0,"SO4":0,
+    "Zn":0,"B":0,"Fe":0,"Mn":0,"Cu":0}
+
+    }
+    a = normalizar_composicion_de_abono(a)
+
+    costo_kg={
+    "Rega":000.8,
+    "Polisulfato":000.58, 
+    "High_Complete":000.6,
+    "Nitrabor":00.7,
+    "High_K":000.6,
+    "Granumax_S":000.5,
+    "Hydran":000.6,
+    "Colono_15-5-20":000.6, 
+    "DAP":000.5,#2020 IDEAL JMGA
+    "kicerita":000.36,#2020 
+    "dolomita":000.36,
+    "micromix_forte":0.8,
+    "enmienda1":0.32,#IDEAL JMGA
+    "KCL":000.42,#2020 IDEAL JMGA
+    "KMAG":0.59,#2020 IDEAL JMGA
+    'Urea x':0.46,#2020 IDEAL JMGA
+    'Boro gra 9.9B':016.25,#IDEAL JMGA
+    'Magnesamon':000.37,#IDEAL JMGA
+    'ABONO1':1,
+    'ABONO2':1,
+    "ABONO3":1
+    }
+    #({Cerisola 2015 universidad nacional de la plata})
+    #espinosa y molina 1999 International plant nutrition institute
+    #amonicaco anhidro  -148CaCO3
+    #cloruro de amonio -128CaCO3
+    #urea -75-84CaCO3
+    #sulfato de amonio -110-112CaCo3   540CaCO3/N*0.21 = 114
+    #nitrato de amonio -60-63CaCO3     540CaCO3/N*(35/2)
+    #carbonato de calcio 100
+    #dolomita 108
+    #Hidroxido de calcio 138
+    #oxido de magnesio MgO 248
+    #oxido de calcio CaO   179
+    #fosfato de amonio (100% amoniacal)
+
+    #OTROS
+    #ureico(CO(NH2)2 lento 1.8CaCO3/N  
+    #nitrato de amonio (33.5N) NH4NO3 0.60CaCO3/kg
+    #poder de (-)neutralizaci�n, o acidificaci�n
+    a_CaCO3={
+    "Nitrabor":0.012*540,#1.2%amoniacal
+    "Rega":0.104*540,
+    "Polisulfato":0, 
+    "High_Complete":0.08*540, #8 amoniacal(NH3;NH4+), 7 nitrico (NO3-) 0.0CaCO3 planta
+    "High_K":0.07*540,#7amoniacal
+    "Granumax_S":-105,
+    "Hydran":0.10*540,#10%amoniacal
+    "Colono_15-5-20":50, 
+    "DAP":69, #no coincide con 0.18*540
+    "kicerita":-0,
+    "dolomita":-108,
+    "enmienda1":-100,
+    "micromix_forte":0,
+    "KCL":100.,#2020
+    "KMAG":0.,#2020
+    'Urea x':84,#2020
+    'Boro gra 9.9B':0,
+    'Magnesamon':0,
+    'ABONO1':0,
+    'ABONO2':0,
+    "ABONO3":0
     }
 
-    
-    
-    #sugerencias para Ca, Mg, K, P, N,  OM 
-    #para suelos con 28% contenido de finos 
-    #(funciona bien para 18 a 28% finos). 
-    #Fuente Forestier, tomado de Wintgens tabla 8.1.2
-    #y sugerencias Fe, Mn, Cu, Zn Fuente Fertiliza
-    #aún no se cuenta con recomendación ni estudios de suelos para boro y azufre
+    #INPUT T�cnico, los valore listados son recomendaciones
+    #fracci�n del abono que se considera que ser� perdido ()
+
+    #Ca,Mg,K,P,N,OM para suelos con 28% finos (Wintgens tabla 8.1.2)
+    #funciona 18 a 28% finos 
+    #Fe,Mn,Cu,Zn sugerido por Fertiliza (falta sugerencia boro y azufre)
     contenido_sugerido={
-    'Ca':{'contenido':2.61,'unidades':'meq%'},#se utilizó el minimo recomendado, 
-    #ya que la recomendación media de calcio puede resultar en costos insostenibles
-    'Mg':{'contenido':0.45,'unidades':'meq%'},#se utilizó el minimo recomendado, 
-    #ya que la recomendación media de calcio puede resultar en costos insostenibles
-    'K':{'contenido':0.35,'unidades':'meq%'},
-    'P':{'contenido':equiv('P2O5',13),'unidades':'ppm(Troug)'},
+    'Ca':{'contenido':5.35,'unidades':'meq%'},
+    'Mg':{'contenido':0.95,'unidades':'meq%'}, 
+    'K':{'contenido':0.42,'unidades':'meq%'},
+    'P':{'contenido':equiv('P2O5',13),'unidades':'ppm(Troug)'},#30mg/kg bot32
     'N':{'contenido':1.74,'unidades':'mg/L'}, 
     'Fe':{'contenido':10,'unidades':'mg/kg_suelo'},
     'Mn':{'contenido':5,'unidades':'mg/kg_suelo'},
@@ -228,225 +310,228 @@ def intdata (cada,mgda,kda,nda,pda,feda,mnda,cuda,znda,sda,bda,a1_nom):
     'S':{'contenido':0,'unidades':'%'}, 
     'B':{'contenido':0,'unidades':'%'}   
     }
-    
-    #kilogramos estimados de nutrientes por hectarea para mantenimiento
-    #sin el consumo de ripe fruits
-    #fuente: 
-    nutriente_mantenimiento_ha={
-    'Ca':equiv('CaO',52.5-4.6),
-    'Mg':equiv('MgO',25.9-5.5),
-    'K': equiv('K2O',149.8-41.4),
-    'P':equiv('P2O5',38.4-5.9),
-    'N':112.1-29.5,
-    'S':1.21/1000, #bot32 
-    'Fe':0.10729/1000,#bot32 
-    'Mn':0.06136/1000,#bot32 
-    'Cu':0.03302/1000,#bot32 
-    'Zn':0.01776/1000,#bot32 
-    'B':0.04979/1000#bot32        
+    #DOSIFICACIO'N de nutrientes necesarios para mantenimiento y producci�n 
+    #en 4 etapas                 
+    fraccion_consumo = {
+    'Ca':[0.35,0.30,0.15,0.20],
+    'Mg':[0.35,0.35,0.15,0.15],
+    'K':[0.05,0.05,0.45,0.45],
+    'P':[0.25,0.25,0.25,0.25],
+    'N':[0.25,0.35,0.20,0.2], 
+    'Fe':[0.25,0.25,0.25,0.25],
+    'Mn':[0.05,0.25,0.35,0.35],
+    'Cu':[0.05,0.25,0.35,0.35],
+    'Zn':[0.05,0.25,0.35,0.35],
+    'OM':[0.05,0.25,0.35,0.35], 
+    'S':[0.25,0.25,0.25,0.25], 
+    'B':[0.05,0.25,0.35,0.35]   
     }
- 
-    #________________________________________________________
     
-    #ingrese los resultados de estudios de suelos con sus unidades
-    contenido_existente={
-    'Ca':{'contenido':caval,'unidades':'cmol+/kg_suelo'},
-    'Mg':{'contenido':mgval,'unidades':'cmol+/kg_suelo'},
-    'K':{'contenido':kval,'unidades':'cmol+/kg_suelo'},
-    'N':{'contenido':nval,'unidades':'mg/L'}, 
-    'P':{'contenido':pval,'unidades':'mg/kg_suelo'},
-    'Fe':{'contenido':feval,'unidades':'mg/kg_suelo'},
-    'Mn':{'contenido':mnval,'unidades':'mg/kg_suelo'},
-    'Cu':{'contenido':cuval,'unidades':'mg/kg_suelo'},
-    'Zn':{'contenido':znval,'unidades':'mg/kg_suelo'},
-    'S':{'contenido':sval,'unidades':'%'}  ,  
-    'B':{'contenido':bval,'unidades':'%'}                          
-    } 
-    #estimación del aporte necesario para cubrir las deficiencias y 
-    #suplir lo que va a consumir la produccion
-    aporte_necesario={}
-    for nutriente, cant in nutriente_produccion.items():    
-        sugerido = kg_hcta(nutriente,contenido_sugerido[nutriente])
-        existencia = kg_hcta(nutriente,contenido_existente[nutriente])
-        deficiencia = max(0,sugerido-existencia)
-        necesidad_hcta = (cant*produccion_kg_hcta+deficiencia)*multiplicador
-        print(nutriente,cant*produccion_kg_hcta,deficiencia,necesidad_hcta)    
-        aporte_necesario[nutriente]=necesidad_hcta
-    
-    #modificar contenidos para considerar que son porcentajes
-    for abono, contenido in a.items():
-        for nutriente in contenido.keys():
-            a[abono][nutriente]/=100
-           
-    #MODIFICAR contenidos definidos en terminos de moleculas
-    for abono, contenido in a.items():
-        a[abono]["P"]=equiv("P2O5",a[abono]["P2O5"])  
-        del a[abono]["P2O5"]    
-        a[abono]["K"]=equiv("K2O",a[abono]["K2O"])
-        del a[abono]["K2O"]
-        a[abono]["Ca"]=equiv("CaO",a[abono]['CaO'])
-        del a[abono]['CaO']
-        a[abono]["Mg"]=equiv("MgO",a[abono]["MgO"])
-        del a[abono]["MgO"]
-        a[abono]["S"]=equiv("SO4",a[abono]["SO4"])
-        del a[abono]["SO4"]       
-          
+    #DOSIFICACIO'N de nutrientes necesarios para construcci�n de suelo 
+    #en 4 etapas (por ejemplo, si desea construir en 5 a�os, cada a�o tendr� 20%, 
+    #cada etapa tendr� 5%), colocar 0 si no se desea construir
+    fraccion_construccion={
+    'Ca':[0.0,0.0,0.0,0.0],
+    'Mg':[0.01,0.01,0.01,0.01],
+    'K':[0.01,0.01,0.01,0.01],
+    'P':[0.01,0.01,0.01,0.01],
+    'N':[0.0,0.0,0.0,0.0],
+    'Fe':[0.0,0.0,0.0,0.0],
+    'Mn':[0.0,0.0,0.0,0.0],
+    'Cu':[0.0,0.0,0.0,0.0],
+    'Zn':[0.0,0.0,0.0,0.0],
+    'OM':[0.0,0.0,0.0,0.0],
+    'S':[0.01,0.01,0.01,0.01],
+    'B':[0.0,0.0,0.0,0.0]
+    }
+    #for k,v in fraccion_construccion.items():
+    #    fraccion_construccion[k]=[1.0,0,0,0]
+
+    #kilogramos estimados de nutrientes depleted por kg de producción 
+    def calcular_necesidad_produccion(produccion):
+        nut_produccion={  #kg/kg
+        'Ca':4.26/1000,#bot32.   wintgens para robusta menciona 'CaO':5.4, carvajal 4.1kg/1255kgv
+        'Mg':2.26/1000,#bot32.   wintgens para robusta menciona 'MgO':4.2, carvajal 4.2kg/1255kgv
+        'K': 36.92/1000,#bot32.   wintgens para robusta menciona K2O:44, carvajal 43.3kg/1255kgv
+        'P':2.26/1000,#bot32.    wintgens para robusta menciona 'P2O5',6.1, carvajal 3.3 kg/1255kgv
+        'N':30.94/1000,#bot32  (wintgens para robusta menciona 33.4kg/1000kg_verde), carvajal 37 kg/1255kgv
+        'S':1.21/1000,#, #bot32,  carvajal menciona 3.1kg/1255kgv
+        'Fe':107.29e-3/1000,#bot32 
+        'Mn':61.36e-3/1000,#bot32 
+        'Cu':33.02e-3/1000,#bot32 
+        'Zn':17.76e-3/1000,#bot32 
+        'B':49.79e-3/1000#bot32        
+        }
+        for k,v in nut_produccion.items():
+            nut_produccion[k]=v*produccion
+        return(nut_produccion)
+
+    #kg_nutrientes/hectarea para mantenimiento (sin considerar producci�n)
+    def calcular_necesidad_mantenimiento(arb_ha):
+        nut_mantenimiento_ha={
+            'Ca':(11.8+7.5+23.6)/1345*arb_ha, #carvajal para 1345 arb/ha 1255kgv
+            'Mg':(2.8+4.2+8.5)/1345*arb_ha, #carvajal para 1345 arb/ha 1255kgv
+            'K': (32.9+23.9+56.8)/1345*arb_ha,#carvajal para 1345 arb/ha 1255kgv
+            'P':(2.8+2.5+12.6)/1345*arb_ha,#carvajal para 1345 arb/ha 1255kgv
+            'N':(19.3+17.9+66.4)/1345*arb_ha,#carvajal para 1345 arb/ha 1255kgv
+            'S':(2.8+1.5+3.5)/1345*arb_ha, #carvajal para 1345 arb/ha 1255kgv
+            'Fe':0,
+            'Mn':0,
+            'Cu':0,
+            'Zn':0,
+            'B':0        
+            }
+        return(nut_mantenimiento_ha)
+
+    def calcular_aporte(a,nut_lista,cantidades,fraccion_aprovechada):
+        aporte_acumulado_temp=dict.fromkeys(nut_lista,0.)
+        for k in nut_lista:  
+            for abono in a.keys():
+                aporte_acumulado_temp[k]+=(a[abono][k]*cantidades[abono]*
+                                        fraccion_aprovechada)
+        return(aporte_acumulado_temp)
         
-    aporte_acumulado=dict.fromkeys(nutriente_produccion,0.)     
-    aporte_acumulado_temp=dict.fromkeys(nutriente_produccion,0.)     
-    print
-    cantidades=dict.fromkeys(a,100)
-    cant_efic=dict.fromkeys(a,100)
-    cant_temp=dict.fromkeys(a,100)
-    aporte_efic=dict.fromkeys(nutriente_produccion,0.)
-    
-    
-    def factor():
-        global aporte_acumulado
-        nonlocal aporte_acumulado_temp
-        nonlocal aporte_necesario
+    def calcular_factor(aporte_acumulado_temp,aporte_necesario):
         factormax=0
         mezcla_completa=1
-        nutriente_critico = ""
+        nut_critico = ""
         for elemento, aporte in aporte_acumulado_temp.items():
             if aporte>0:
                 factor=aporte_necesario[elemento]/aporte
                 if factor>factormax:
                     factormax=factor
-                    nutriente_critico = elemento
             else:
-                mezcla_completa=0
-           
+                factormax=1e6
                 break
-        return factormax, mezcla_completa, nutriente_critico
-    
-    def ciclar(abono_cambiando):
-        nonlocal costo_minimo
-        
-        nonlocal costo_efic
-        
-        nonlocal iteraciones
-        nonlocal cantidades
-        global can_ant
-        
-        nonlocal costo_unitario
-        
-        nonlocal costo_unitario_efic
-        global a
-        
-        nonlocal factor_efec
-        
-        nonlocal aporte_acumulado
-        nonlocal aporte_acumulado_temp
-        
-        nonlocal abonos
-        nonlocal nabonos
-        
-        nonlocal iterant
-        nonlocal aporte_factorado
-        cambio_costo = 0
-        for k,v in cantidades.items():
-                cant_temp[k]=v
-        for kg in range(-1,2,1):
-            cant_temp[abono_cambiando]=max(0.,cantidades[abono_cambiando]+kg)
-            costo_unitario_temp=0.        
-            for abono in a.keys():
-                costo_unitario_temp += costo_kg[abono]*cant_temp[abono]        
-            for k in aporte_acumulado.keys():  
-                aporte_acumulado_temp[k]=0.
-                for abono in a.keys():
-                    aporte_acumulado_temp[k]+=a[abono][k]*cant_temp[abono]
-            iteraciones += 1        
-            fact, mezcla_completa, nutriente_critico = factor()
+        return factormax
 
-            if mezcla_completa==1:     
-                costo_total = costo_unitario_temp*fact         
-                for k,v in aporte_acumulado_temp.items():
-                    aporte_factorado[k] = v*fact     
-                #print(abono_cambiando,cantidades[abono_cambiando],cant_temp[abono_cambiando],
-                                           #np.round(fact,2),np.round(costo_total,2),np.round(costo_minimo,2))
-                #print(cantidades)
-                #print(cant_temp)
-                #print(cantidades)
-                if costo_total<costo_minimo:    
-                    costo_minimo=costo_total
-                    cambio_costo =1
-                    factor_efec=fact
-                    print()
-                    print("-----------------------------------")
-                    print("necesidad estimada (kg/ha): ",end='')
-                    printdi(aporte_necesario)
-                    print("            aporte (kg/ha): ",end='')
-                    printdi(aporte_factorado)                 
-                    print("cantidad de abonos (kg/ha):",end='')
-                    for k,v in cantidades.items():
-                        print(k, round(v*fact,0), end='; ') 
-                    print(cantidades)
-                    print("costo",costo_total, "  nutriente critico:",nutriente_critico) 
-                
-                    cant_efic=cant_temp[abono_cambiando]
-                    
-            if iteraciones-iterant > 0.01*posibiter:
-                iterant=iteraciones
-                        #print(int(round(iteraciones/posibiter*100,0)),end='% - ')
-        if cambio_costo == 1:   
-            cantidades[abono_cambiando]=cant_efic
+    def calcular_costo(cantidad_t,costo_kg):
+        costo =0
+        for abono in cantidad_t:
+            costo += costo_kg[abono]*cantidad_t[abono] 
+        return(costo)
+
+    nut_lista = ["N","P","K","Ca","Mg","S","Zn","B","Fe","Mn","Cu"]
+
+    #ingrese los resultados de estudios de suelos con sus unidades
+    contenido_existente={
+    'Ca':{'contenido':0.9,'unidades':'cmol+/kg_suelo'},
+    'Mg':{'contenido':0.16,'unidades':'cmol+/kg_suelo'},
+    'K':{'contenido':0.060,'unidades':'cmol+/kg_suelo'},
+    'N':{'contenido':1.1,'unidades':'mg/L'}, 
+    'P':{'contenido':3.3,'unidades':'mg/kg_suelo'},
+    'Fe':{'contenido':18.0,'unidades':'mg/kg_suelo'},
+    'Mn':{'contenido':2.4,'unidades':'mg/kg_suelo'},
+    'Cu':{'contenido':1.5,'unidades':'mg/kg_suelo'},
+    'Zn':{'contenido':2.3,'unidades':'mg/kg_suelo'},
+    'S':{'contenido':0,'unidades':'%'}  ,  
+    'B':{'contenido':0,'unidades':'%'}                          
+    }
+
+    def calcular_aporte_aplicacion(aporte_construccion,
+                            aporte_consumo,fraccion_construccion,
+                            fraccion_consumo,n_aplicacion):
+        aporte_necesario={}
+        for k in nut_lista:
+            f_constru=fraccion_construccion[k][n_aplicacion]
+            f_consumo=fraccion_consumo[k][n_aplicacion]
+            aporte_necesario[k]=(aporte_construccion[k]*f_constru+
+                                aporte_consumo[k]*f_consumo)
+        #mod decimales
+        #aporte_necesario[k]=round(aporte_necesario[k],2) no funciona
+
+        return(aporte_necesario) 
+
+
+    def calcular_CaCO3(cantidad_t,a_CaCO3):
+        CaCO3_total=0
+        for abono in cantidad_t:
+            CaCO3_total += a_CaCO3[abono]*cantidad_t[abono] 
+        CaCO3_total = max(0,CaCO3_total)
+        return(CaCO3_total)
+
+    def main():
+        factor=1
+        costo_abono=10000000
+        costo_CaCO3=10000000
         
-    entrok=0
-    costo_minimo=1e32
-    costo_efic=1e32
-    nabonos =len(a)
-    abonos = list(a.keys())
-    iteraciones=0
-    iterant=0
-    factor_efec=0
-    posibiter= (fracciones+1)**nabonos
-    costo_unitario=0
-    for abono in a.keys():
-        costo_unitario+=costo_kg[abono]
-    costo_unitario_efic=costo_unitario
-    print(costo_unitario)
-    aporte_factorado={}
-    
-    for k in aporte_acumulado.keys():  
-        for abono in a.keys():
-            contenido_nut=a[abono]     
-            if contenido_nut[k] >0 :
-                aporte_acumulado[k]=aporte_acumulado[k]+contenido_nut[k]*cantidades[abono]
-        aporte_acumulado_temp[k]=aporte_acumulado[k]
-        aporte_efic[k]=aporte_acumulado[k]
-        
-        
-    for i in range(1000):
-        for nombre_abono in a.keys():
-            ciclar(nombre_abono)
+        nut_mantenimiento_ha=calcular_necesidad_mantenimiento(arb_ha)
+
+        can_temp= {}
+        aporte_construccion, aporte_consumo = calcular_aporte_necesario(nut_lista,
+            contenido_sugerido,contenido_existente, produccion_kg_ha, arb_ha, 
+            densidad,espesor
+            )
+        aporte_necesario ={}
+        cantidad_aplicaciones=4
+        costo_anual = 0
+        for n_aplicacion in range(cantidad_aplicaciones):
+            aporte_necesario = calcular_aporte_aplicacion(aporte_construccion,
+                            aporte_consumo,fraccion_construccion,
+                            fraccion_consumo,n_aplicacion)
+            cantidades = dict.fromkeys(a,100)
+            costo=1.e5
+
+            costo_anterior=0.
+            i=0
+            while costo!= costo_anterior and i<1000:
+                i+=1
+                costo_anterior=costo
+                for abo_cam in a.keys():
+                    for k in cantidades:
+                        can_temp[k]=cantidades[k]
+                    for cambio in [-1,1]: 
+                        can_temp[abo_cam]=max(0.,cantidades[abo_cam]+cambio)
+                        aporte_acumulado_t=calcular_aporte(a,nut_lista,can_temp,
+                                                        fraccion_aprovechada)
+                        factor_t = calcular_factor(aporte_acumulado_t, aporte_necesario)
+                        CaCO3_total= calcular_CaCO3(can_temp,a_CaCO3)
+                        costo_CaCO3_t=CaCO3_total*costo_CaCO3_kg*factor_t
+                        costo_abono_t = calcular_costo(can_temp,costo_kg)*factor_t
+                        
+                        if costo_CaCO3_t + costo_abono_t < costo:
+                            costo = costo_CaCO3_t + costo_abono_t
+                            costo_abono = costo_abono_t
+                            costo_CaCO3 = costo_CaCO3_t
+                            CaCO3 = CaCO3_total
+                            factor=factor_t
+                            for k in cantidades:
+                                cantidades[k]=can_temp[k]          
+            kg_total=0
             for k,v in cantidades.items():
-                cant_temp[k]=v
-        print(i,factor_efec,"xxx",np.round(costo_minimo,2), end=" ")
-    print("")
-    
-   
-    lista1=[]
-    lista2=[]
-    lista3=[]
-    
-    for k,v in cantidades.items():
-        print(k,round(v*factor_efec,2),"kg/hcta")
-        lista1.append(k)
-        lista2.append(round(v*factor_efec,2))
-   
-    print(str(caval))
-    
-    return lista2
- 
-    
-#intdata(8.57,1.62,0.60,10.8,32.65,178.38,23.85,15.35,23.30,0,0,0)
+                kg_total += v*factor
+                cantidades[k] *= factor 
 
-print("")
-print("NOTA IMPORTANTE:")
-print("Estas no son recomendaciones agronómicas, son solo cálculos matemáticos")
-print("basados en los datos introducidos a este código, que pudiera servir")
-print("como herramienta de cálculo durante las decisiones agronómicas")
-print("CAMBIE Y SOLO LE DOY SYNCHRONIZE CHANGEES333")
-print("otro cambio223456")
+                #mod
+                cantidades[k] = round(cantidades[k],2)
+                lista1.append(cantidades[k])
+                lista2.append(k)
 
+
+            print("------------------------------------------------")
+            print("APLICACION ",n_aplicacion)
+            print("para lograr el aporte necesario:")
+            print(aporte_necesario)
+            print()
+            print("aplicar: ",round(kg_total,2)," kg/ha de una mezcla con las",
+                "siguientes cantidades",cantidades)
+            print("costo abono",costo_abono," costo neutralizar",costo_CaCO3)
+            costo_anual += costo
+
+        print("COSTO ANUAL:",costo_anual)
+        print("")
+        print("NOTA IMPORTANTE:")
+        print("Estas no son recomendaciones agronomicas, son solo c�lculos matem�ticos")
+        print("basados en los datos introducidos a este c�digo, que pudieran servir")
+        print("como herramienta de c�lculo durante las decisiones agron�micas")
+        print("")
+
+        #mod
+        print("lista 1= ", lista1)
+        print("lista 2= ", lista2)
+
+    main()
+
+    return lista1
+
+intdata(8.57,1.62,0.60,10.8,32.65,178.38,23.85,15.35,23.30,0,0,0)

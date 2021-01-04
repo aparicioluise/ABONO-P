@@ -1035,7 +1035,6 @@ tools:context="expanse.publico.abono.MainActivity">
                 app:layout_constraintTop_toTopOf="parent" />
         </TableRow>
 
-
         <TableRow>
 
             <TextView
