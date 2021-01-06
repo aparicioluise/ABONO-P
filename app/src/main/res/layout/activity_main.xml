@@ -371,7 +371,7 @@ tools:context="expanse.publico.abono.MainActivity">
 
 
     <TableLayout
-        android:id="@+id/tl_a"
+        android:id="@+id/tl_c"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -382,6 +382,1472 @@ tools:context="expanse.publico.abono.MainActivity">
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bet">
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/textView39"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:gravity="center"
+                android:text="Ingrese los siguientes datos del área abonada:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/textView40"
+                android:layout_marginHorizontal="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="Costo CaCO3"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/cosca"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="6"
+                android:text="0.10"
+                android:textSize="14sp"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/textView41"
+                android:layout_marginHorizontal="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="Densidad de la capa de suelo="
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/densi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="6"
+                android:text="1200"
+                android:textSize="14sp"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/textView42"
+                android:layout_marginHorizontal="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="Espesor de la capa de suelo="
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/espes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="6"
+                android:text="0.2"
+                android:textSize="14sp"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/textView43"
+                android:layout_marginHorizontal="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="Producción estimada="
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/produ"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="6"
+                android:text="1800"
+                android:textSize="14sp"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/textView44"
+                android:layout_marginHorizontal="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="Producción estimada="
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/arbha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="6"
+                android:text="3000"
+                android:textSize="14sp"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+
+
+
+
+
+
+
+
+
+
+
+    </TableLayout>
+
+
+    <TableLayout
+        android:id="@+id/tl_d"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tl_c">
+
+        <TableRow android:layout_width="match_parent">
+
+            <TextView
+                android:id="@+id/textView50"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:gravity="center"
+                android:text="Ingrese los precios de los siguientes abonos:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/textView51"
+                android:layout_marginHorizontal="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="Rega="
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/c_rega"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="6"
+                android:text="1"
+                android:textSize="14sp"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/textView52"
+                android:layout_marginHorizontal="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="Polisulfato="
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/c_polisulfato"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="6"
+                android:text="1"
+                android:textSize="14sp"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/textView53"
+                android:layout_marginHorizontal="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="High_Complete="
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/c_high_complete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="6"
+                android:text="1"
+                android:textSize="14sp"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/textView54"
+                android:layout_marginHorizontal="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="Nitrabor="
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/c_nitrabor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="6"
+                android:text="1"
+                android:textSize="14sp"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/textView55"
+                android:layout_marginHorizontal="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="High_K="
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/c_high_k"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="6"
+                android:text="1"
+                android:textSize="14sp"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/textView56"
+                android:layout_marginHorizontal="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="Granumax_S="
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/c_granumax_s"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="6"
+                android:text="1"
+                android:textSize="14sp"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/textView57"
+                android:layout_marginHorizontal="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="Hydran="
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/c_hydran"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="6"
+                android:text="1"
+                android:textSize="14sp"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/textView58"
+                android:layout_marginHorizontal="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="Colono_15-5-20="
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/c_colono_15_5_20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="6"
+                android:text="1"
+                android:textSize="14sp"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/textView59"
+                android:layout_marginHorizontal="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="DAP="
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/c_dap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="6"
+                android:text="1"
+                android:textSize="14sp"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/textView60"
+                android:layout_marginHorizontal="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="Kicerita="
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/c_kicerita"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="6"
+                android:text="1"
+                android:textSize="14sp"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/textView61"
+                android:layout_marginHorizontal="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="Dolomita="
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/c_dolomita"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="6"
+                android:text="1"
+                android:textSize="14sp"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/textView62"
+                android:layout_marginHorizontal="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="Micromix_Forte="
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/c_micromix_forte"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="6"
+                android:text="@string/_1"
+                android:textSize="14sp"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/textView63"
+                android:layout_marginHorizontal="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="Enmienda_1="
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/c_enmienda1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="6"
+                android:text="1"
+                android:textSize="14sp"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/textView64"
+                android:layout_marginHorizontal="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="KCL="
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/c_kcl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="6"
+                android:text="1"
+                android:textSize="14sp"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/textView65"
+                android:layout_marginHorizontal="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="KMAG="
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/c_kmag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="6"
+                android:text="1"
+                android:textSize="14sp"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/textView66"
+                android:layout_marginHorizontal="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="Urea_X="
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/c_urea_x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="6"
+                android:text="1"
+                android:textSize="14sp"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/textView67"
+                android:layout_marginHorizontal="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="Boro_Gra_9.9B="
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/c_boro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="6"
+                android:text="1"
+                android:textSize="14sp"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/textView68"
+                android:layout_marginHorizontal="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="Magnesamon="
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/c_magnesamon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="6"
+                android:text="1"
+                android:textSize="14sp"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+
+    </TableLayout>
+
+
+
+    <TableLayout
+        android:id="@+id/tl_e"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tl_d">
+
+        <TableRow android:layout_width="match_parent">
+
+            <TextView
+                android:id="@+id/textView70"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_span="5"
+                android:gravity="center"
+                android:text="Ingrese los porcentajes para la ejecución de cuatro etapas de dosificación de la fracción de consumo:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/textView71"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:gravity="left"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textView72"
+                android:layout_marginHorizontal="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="E1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textView73"
+                android:layout_marginHorizontal="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="E2"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textView74"
+                android:layout_marginHorizontal="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="E3"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textView75"
+                android:layout_marginHorizontal="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="E4"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/textView76"
+                android:layout_marginHorizontal="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="Ca="
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/e1_ca"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:inputType="numberDecimal"
+                android:text="0.25"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <EditText
+                android:id="@+id/e2_ca"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:text="0.25"
+                android:textSize="14sp"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <EditText
+                android:id="@+id/e3_ca"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:inputType="numberDecimal"
+                android:text="0.25"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/e4_ca"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:inputType="numberDecimal"
+                android:text="0.25"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/textView77"
+                android:layout_marginHorizontal="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="Mg="
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/e1_mg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:inputType="numberDecimal"
+                android:text="0.25"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <EditText
+                android:id="@+id/e2_mg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:text="0.25"
+                android:textSize="14sp"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <EditText
+                android:id="@+id/e3_mg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:inputType="numberDecimal"
+                android:text="0.25"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/e4_mg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:inputType="numberDecimal"
+                android:text="0.25"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/textView78"
+                android:layout_marginHorizontal="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="K="
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/e1_k"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:inputType="numberDecimal"
+                android:text="0.25"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <EditText
+                android:id="@+id/e2_k"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:text="0.25"
+                android:textSize="14sp"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <EditText
+                android:id="@+id/e3_k"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:inputType="numberDecimal"
+                android:text="0.25"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/e4_k"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:inputType="numberDecimal"
+                android:text="0.25"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/textView79"
+                android:layout_marginHorizontal="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="N="
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/e1_n"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:inputType="numberDecimal"
+                android:text="0.25"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <EditText
+                android:id="@+id/e2_n"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:text="0.25"
+                android:textSize="14sp"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <EditText
+                android:id="@+id/e3_n"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:inputType="numberDecimal"
+                android:text="0.25"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/e4_n"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:inputType="numberDecimal"
+                android:text="0.25"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/textView80"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:gravity="right"
+                android:text="P="
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/e1_p"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:inputType="numberDecimal"
+                android:text="0.25"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <EditText
+                android:id="@+id/e2_p"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:text="0.25"
+                android:textSize="14sp"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <EditText
+                android:id="@+id/e3_p"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:inputType="numberDecimal"
+                android:text="0.25"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/e4_p"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:inputType="numberDecimal"
+                android:text="0.25"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/textView81"
+                android:layout_marginHorizontal="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="Fe="
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/e1_fe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:inputType="numberDecimal"
+                android:text="0.25"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <EditText
+                android:id="@+id/e2_fe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:text="0.25"
+                android:textSize="14sp"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <EditText
+                android:id="@+id/e3_fe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:inputType="numberDecimal"
+                android:text="0.25"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/e4_fe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:inputType="numberDecimal"
+                android:text="0.25"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/textView82"
+                android:layout_marginHorizontal="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="Mn="
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/e1_mn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:inputType="numberDecimal"
+                android:text="0.25"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <EditText
+                android:id="@+id/e2_mn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:text="0.25"
+                android:textSize="14sp"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <EditText
+                android:id="@+id/e3_mn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:inputType="numberDecimal"
+                android:text="0.25"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/e4_mn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:inputType="numberDecimal"
+                android:text="0.25"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/textView83"
+                android:layout_marginHorizontal="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="Cu="
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/e1_cu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:inputType="numberDecimal"
+                android:text="0.25"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <EditText
+                android:id="@+id/e2_cu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:text="0.25"
+                android:textSize="14sp"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <EditText
+                android:id="@+id/e3_cu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:inputType="numberDecimal"
+                android:text="0.25"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/e4_cu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:inputType="numberDecimal"
+                android:text="0.25"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/textView84"
+                android:layout_marginHorizontal="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="Zn="
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/e1_zn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:inputType="numberDecimal"
+                android:text="0.25"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <EditText
+                android:id="@+id/e2_zn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:text="0.25"
+                android:textSize="14sp"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/e3_zn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:inputType="numberDecimal"
+                android:text="0.25"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/e4_zn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:inputType="numberDecimal"
+                android:text="0.25"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/textView85"
+                android:layout_marginHorizontal="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="S="
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/e1_s"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:inputType="numberDecimal"
+                android:text="0.25"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <EditText
+                android:id="@+id/e2_s"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:text="0.25"
+                android:textSize="14sp"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <EditText
+                android:id="@+id/e3_s"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:inputType="numberDecimal"
+                android:text="0.25"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/e4_s"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:inputType="numberDecimal"
+                android:text="0.25"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/textView86"
+                android:layout_marginHorizontal="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="B="
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/e1_b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:inputType="numberDecimal"
+                android:text="0.25"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <EditText
+                android:id="@+id/e2_b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:text="0.25"
+                android:textSize="14sp"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <EditText
+                android:id="@+id/e3_b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:inputType="numberDecimal"
+                android:text="0.25"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/e4_b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:autofillHints=""
+                android:ems="5"
+                android:inputType="numberDecimal"
+                android:text="0.25"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+
+    </TableLayout>
+
+
+
+    <TableLayout
+        android:id="@+id/tl_a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tl_e">
 
         <TableRow>
             android:layout_width="match_parent"

@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     EditText a1_nom, a1_cos, a1_ca, a1_mg, a1_k, a1_n,a1_p,a1_fe, a1_mn, a1_cu, a1_zn,a1_s, a1_b;
     EditText a2_nom, a2_cos, a2_ca, a2_mg, a2_k, a2_n,a2_p,a2_fe, a2_mn, a2_cu, a2_zn,a2_s, a2_b;
     EditText a3_nom, a3_cos, a3_ca, a3_mg, a3_k, a3_n,a3_p,a3_fe, a3_mn, a3_cu, a3_zn,a3_s, a3_b;
+
     String datos;
     String[] resultado;
     ArrayAdapter aa;
