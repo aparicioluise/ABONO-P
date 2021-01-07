@@ -25,10 +25,19 @@ public class MainActivity extends AppCompatActivity {
 
     Button Btn;
     TextView Tx1, text2;
-    EditText caet, mget, ket, net, pet, feet, mnet, cuet, znet, set, bet;
+    EditText  caet, mget, ket, net, pet, feet, mnet, cuet, znet, set, bet;
     EditText a1_nom, a1_cos, a1_ca, a1_mg, a1_k, a1_n,a1_p,a1_fe, a1_mn, a1_cu, a1_zn,a1_s, a1_b;
     EditText a2_nom, a2_cos, a2_ca, a2_mg, a2_k, a2_n,a2_p,a2_fe, a2_mn, a2_cu, a2_zn,a2_s, a2_b;
     EditText a3_nom, a3_cos, a3_ca, a3_mg, a3_k, a3_n,a3_p,a3_fe, a3_mn, a3_cu, a3_zn,a3_s, a3_b;
+
+    EditText cosca, densi, espes, produ, arbha;
+    EditText c_rega, c_polisulfato, c_high_complete, c_high_k, c_granumax_s, c_hydran, c_colono_15_5_20,
+            c_dap, c_kicerita, c_dolomita,c_micromix_forte, c_enmienda1, c_kcl, c_kmag, c_urea_x, c_boro,
+            c_Magnesamon, c_nitrabor;
+    EditText e1_ca, e1_mg, e1_k, e1_n, e1_p, e1_fe, e1_mn, e1_cu, e1_zn, e1_s, e1_b;
+    EditText e2_ca, e2_mg, e2_k, e2_n, e2_p, e2_fe, e2_mn, e2_cu, e2_zn, e2_s, e2_b;
+    EditText e3_ca, e3_mg, e3_k, e3_n, e3_p, e3_fe, e3_mn, e3_cu, e3_zn, e3_s, e3_b;
+    EditText e4_ca, e4_mg, e4_k, e4_n, e4_p, e4_fe, e4_mn, e4_cu, e4_zn, e4_s, e4_b;
 
     String datos;
     String[] resultado;
@@ -50,7 +59,15 @@ public class MainActivity extends AppCompatActivity {
         Tx1=(TextView)findViewById(R.id.tx1);
         text2=(TextView)findViewById(R.id.text2);
 
-        caet=(EditText)findViewById(R.id.caet);
+        Bar=(ProgressBar)findViewById(R.id.Bar);
+        handeler=new Handler();
+
+        tl_b=(TableLayout)findViewById(R.id.tl_b);
+        rg_a=(RadioGroup)findViewById(R.id.rg_a);
+        rb_a_1=(RadioButton)findViewById(R.id.rb_a_1);
+        rb_a_2=(RadioButton)findViewById(R.id.rb_a_2);
+
+        caet = (EditText) findViewById(R.id.caet);
         mget=(EditText)findViewById(R.id.mget);
         ket=(EditText)findViewById(R.id.ket);
         net=(EditText)findViewById(R.id.net);
@@ -104,13 +121,78 @@ public class MainActivity extends AppCompatActivity {
         a3_s=(EditText)findViewById(R.id.a3_s);
         a3_b=(EditText)findViewById(R.id.a3_b);
 
-        Bar=(ProgressBar)findViewById(R.id.Bar);
-        handeler=new Handler();
+        cosca=(EditText)findViewById(R.id.cosca);
+        densi=(EditText)findViewById(R.id.densi);
+        espes=(EditText)findViewById(R.id.espes);
+        produ=(EditText)findViewById(R.id.produ);
+        arbha=(EditText)findViewById(R.id.arbha);
 
-        tl_b=(TableLayout)findViewById(R.id.tl_b);
-        rg_a=(RadioGroup)findViewById(R.id.rg_a);
-        rb_a_1=(RadioButton)findViewById(R.id.rb_a_1);
-        rb_a_2=(RadioButton)findViewById(R.id.rb_a_2);
+        c_rega=(EditText)findViewById(R.id.c_rega);
+        c_polisulfato=(EditText)findViewById(R.id.c_polisulfato);
+        c_high_complete=(EditText)findViewById(R.id.c_high_complete);
+        c_nitrabor=(EditText)findViewById(R.id.c_nitrabor);
+        c_high_k=(EditText)findViewById(R.id.c_high_k);
+        c_granumax_s=(EditText)findViewById(R.id.c_granumax_s);
+        c_hydran=(EditText)findViewById(R.id.c_hydran);
+        c_colono_15_5_20=(EditText)findViewById(R.id.c_colono_15_5_20);
+        c_dap=(EditText)findViewById(R.id.c_dap);
+        c_kicerita=(EditText)findViewById(R.id.c_kicerita);
+        c_dolomita=(EditText)findViewById(R.id.c_dolomita);
+        c_micromix_forte=(EditText)findViewById(R.id.c_micromix_forte);
+        c_enmienda1=(EditText)findViewById(R.id.c_enmienda1);
+        c_kcl=(EditText)findViewById(R.id.c_kcl);
+        c_kmag=(EditText)findViewById(R.id.c_kmag);
+        c_urea_x=(EditText)findViewById(R.id.c_urea_x);
+        c_boro=(EditText)findViewById(R.id.c_boro);
+        c_Magnesamon=(EditText)findViewById(R.id.c_magnesamon);
+
+        e1_ca=(EditText)findViewById(R.id.e1_ca);
+        e1_mg=(EditText)findViewById(R.id.e1_mg);
+        e1_k=(EditText)findViewById(R.id.e1_k);
+        e1_n=(EditText)findViewById(R.id.e1_n);
+        e1_p=(EditText)findViewById(R.id.e1_p);
+        e1_fe=(EditText)findViewById(R.id.e1_fe);
+        e1_mn=(EditText)findViewById(R.id.e1_mn);
+        e1_cu=(EditText)findViewById(R.id.e1_cu);
+        e1_zn=(EditText)findViewById(R.id.e1_zn);
+        e1_s=(EditText)findViewById(R.id.e1_s);
+        e1_b=(EditText)findViewById(R.id.e1_b);
+
+        e2_ca=(EditText)findViewById(R.id.e2_ca);
+        e2_mg=(EditText)findViewById(R.id.e2_mg);
+        e2_k=(EditText)findViewById(R.id.e2_k);
+        e2_n=(EditText)findViewById(R.id.e2_n);
+        e2_p=(EditText)findViewById(R.id.e2_p);
+        e2_fe=(EditText)findViewById(R.id.e2_fe);
+        e2_mn=(EditText)findViewById(R.id.e2_mn);
+        e2_cu=(EditText)findViewById(R.id.e2_cu);
+        e2_zn=(EditText)findViewById(R.id.e2_zn);
+        e2_s=(EditText)findViewById(R.id.e2_s);
+        e2_b=(EditText)findViewById(R.id.e2_b);
+
+        e3_ca=(EditText)findViewById(R.id.e3_ca);
+        e3_mg=(EditText)findViewById(R.id.e3_mg);
+        e3_k=(EditText)findViewById(R.id.e3_k);
+        e3_n=(EditText)findViewById(R.id.e3_n);
+        e3_p=(EditText)findViewById(R.id.e3_p);
+        e3_fe=(EditText)findViewById(R.id.e3_fe);
+        e3_mn=(EditText)findViewById(R.id.e3_mn);
+        e3_cu=(EditText)findViewById(R.id.e3_cu);
+        e3_zn=(EditText)findViewById(R.id.e3_zn);
+        e3_s=(EditText)findViewById(R.id.e3_s);
+        e3_b=(EditText)findViewById(R.id.e3_b);
+
+        e4_ca=(EditText)findViewById(R.id.e4_ca);
+        e4_mg=(EditText)findViewById(R.id.e4_mg);
+        e4_k=(EditText)findViewById(R.id.e4_k);
+        e4_n=(EditText)findViewById(R.id.e4_n);
+        e4_p=(EditText)findViewById(R.id.e4_p);
+        e4_fe=(EditText)findViewById(R.id.e4_fe);
+        e4_mn=(EditText)findViewById(R.id.e4_mn);
+        e4_cu=(EditText)findViewById(R.id.e4_cu);
+        e4_zn=(EditText)findViewById(R.id.e4_zn);
+        e4_s=(EditText)findViewById(R.id.e4_s);
+        e4_b=(EditText)findViewById(R.id.e4_b);
 
         if (!Python.isStarted())
             Python.start(new AndroidPlatform(this));
@@ -228,7 +310,6 @@ public class MainActivity extends AppCompatActivity {
             final String sda=String.valueOf(set.getText());
             final String bda=String.valueOf(bet.getText());
 
-
             final String a1_nom_v=String.valueOf(a1_nom);
             final String a1_cos_v=String.valueOf(a1_cos);
             final String a1_ca_v=String.valueOf(a1_ca);
@@ -270,6 +351,79 @@ public class MainActivity extends AppCompatActivity {
             final String a3_zn_v=String.valueOf(a3_zn);
             final String a3_s_v=String.valueOf(a3_s);
             final String a3_b_v=String.valueOf(a3_b);
+
+            final String cosca_v=String.valueOf(cosca);
+            final String densi_v=String.valueOf(densi);
+            final String espes_v=String.valueOf(espes);
+            final String produ_v=String.valueOf(produ);
+            final String arbha_v=String.valueOf(arbha);
+
+            final String rega_v=String.valueOf(c_rega);
+            final String polisulfato_v=String.valueOf(c_polisulfato);
+            final String high_complete_v=String.valueOf(c_high_complete);
+            final String nitrabor_v=String.valueOf(c_nitrabor);
+            final String high_k_v=String.valueOf(c_high_k);
+            final String granumax_s_v=String.valueOf(c_granumax_s);
+            final String hydran_v=String.valueOf(c_hydran);
+            final String colono_v=String.valueOf(c_colono_15_5_20);
+            final String dap_v=String.valueOf(c_dap);
+            final String kicerita_v=String.valueOf(c_kicerita);
+            final String dolomita_v=String.valueOf(c_dolomita);
+            final String micromix_forte_v=String.valueOf(c_micromix_forte);
+            final String enmienda1_v=String.valueOf(c_enmienda1);
+            final String kcl_v=String.valueOf(c_kcl);
+            final String kmag_v=String.valueOf(c_kmag);
+            final String urea_v=String.valueOf(c_urea_x);
+            final String boro_v=String.valueOf(c_boro);
+            final String magnesamon_v=String.valueOf(c_Magnesamon);
+
+            final String e1_ca_v=String.valueOf(e1_ca);
+            final String e1_mg_v=String.valueOf(e1_mg);
+            final String e1_k_v=String.valueOf(e1_k);
+            final String e1_n_v=String.valueOf(e1_n);
+            final String e1_p_v=String.valueOf(e1_p);
+            final String e1_fe_v=String.valueOf(e1_fe);
+            final String e1_mn_v=String.valueOf(e1_mn);
+            final String e1_zn_v=String.valueOf(e1_zn);
+            final String e1_cu_v=String.valueOf(e1_cu);
+            final String e1_s_v=String.valueOf(e1_s);
+            final String e1_b_v=String.valueOf(e1_b);
+
+            final String e2_ca_v=String.valueOf(e2_ca);
+            final String e2_mg_v=String.valueOf(e2_mg);
+            final String e2_k_v=String.valueOf(e2_k);
+            final String e2_n_v=String.valueOf(e2_n);
+            final String e2_p_v=String.valueOf(e2_p);
+            final String e2_fe_v=String.valueOf(e2_fe);
+            final String e2_mn_v=String.valueOf(e2_mn);
+            final String e2_zn_v=String.valueOf(e2_zn);
+            final String e2_cu_v=String.valueOf(e2_cu);
+            final String e2_s_v=String.valueOf(e2_s);
+            final String e2_b_v=String.valueOf(e2_b);
+
+            final String e3_ca_v=String.valueOf(e3_ca);
+            final String e3_mg_v=String.valueOf(e3_mg);
+            final String e3_k_v=String.valueOf(e3_k);
+            final String e3_n_v=String.valueOf(e3_n);
+            final String e3_p_v=String.valueOf(e3_p);
+            final String e3_fe_v=String.valueOf(e3_fe);
+            final String e3_mn_v=String.valueOf(e3_mn);
+            final String e3_zn_v=String.valueOf(e3_zn);
+            final String e3_cu_v=String.valueOf(e3_cu);
+            final String e3_s_v=String.valueOf(e3_s);
+            final String e3_b_v=String.valueOf(e3_b);
+
+            final String e4_ca_v=String.valueOf(e4_ca);
+            final String e4_mg_v=String.valueOf(e4_mg);
+            final String e4_k_v=String.valueOf(e4_k);
+            final String e4_n_v=String.valueOf(e4_n);
+            final String e4_p_v=String.valueOf(e4_p);
+            final String e4_fe_v=String.valueOf(e4_fe);
+            final String e4_mn_v=String.valueOf(e4_mn);
+            final String e4_zn_v=String.valueOf(e4_zn);
+            final String e4_cu_v=String.valueOf(e4_cu);
+            final String e4_s_v=String.valueOf(e4_s);
+            final String e4_b_v=String.valueOf(e4_b);
 
             // integracion python
 
