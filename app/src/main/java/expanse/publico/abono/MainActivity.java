@@ -310,120 +310,120 @@ public class MainActivity extends AppCompatActivity {
             final String sda=String.valueOf(set.getText());
             final String bda=String.valueOf(bet.getText());
 
-            final String a1_nom_v=String.valueOf(a1_nom);
-            final String a1_cos_v=String.valueOf(a1_cos);
-            final String a1_ca_v=String.valueOf(a1_ca);
-            final String a1_mg_v=String.valueOf(a1_mg);
-            final String a1_k_v=String.valueOf(a1_k);
-            final String a1_n_v=String.valueOf(a1_n);
-            final String a1_p_v=String.valueOf(a1_p);
-            final String a1_fe_v=String.valueOf(a1_fe);
-            final String a1_mn_v=String.valueOf(a1_mn);
-            final String a1_cu_v=String.valueOf(a1_cu);
-            final String a1_zn_v=String.valueOf(a1_zn);
-            final String a1_s_v=String.valueOf(a1_s);
-            final String a1_b_v=String.valueOf(a1_b);
+            final String a1_nom_v=String.valueOf(a1_nom.getText());
+            final String a1_cos_v=String.valueOf(a1_cos.getText());
+            final String a1_ca_v=String.valueOf(a1_ca.getText());
+            final String a1_mg_v=String.valueOf(a1_mg.getText());
+            final String a1_k_v=String.valueOf(a1_k.getText());
+            final String a1_n_v=String.valueOf(a1_n.getText());
+            final String a1_p_v=String.valueOf(a1_p.getText());
+            final String a1_fe_v=String.valueOf(a1_fe.getText());
+            final String a1_mn_v=String.valueOf(a1_mn.getText());
+            final String a1_cu_v=String.valueOf(a1_cu.getText());
+            final String a1_zn_v=String.valueOf(a1_zn.getText());
+            final String a1_s_v=String.valueOf(a1_s.getText());
+            final String a1_b_v=String.valueOf(a1_b.getText());
 
-            final String a2_nom_v=String.valueOf(a2_nom);
-            final String a2_cos_v=String.valueOf(a2_cos);
-            final String a2_ca_v=String.valueOf(a2_ca);
-            final String a2_mg_v=String.valueOf(a2_mg);
-            final String a2_k_v=String.valueOf(a2_k);
-            final String a2_n_v=String.valueOf(a2_n);
-            final String a2_p_v=String.valueOf(a2_p);
-            final String a2_fe_v=String.valueOf(a2_fe);
-            final String a2_mn_v=String.valueOf(a2_mn);
-            final String a2_cu_v=String.valueOf(a2_cu);
-            final String a2_zn_v=String.valueOf(a2_zn);
-            final String a2_s_v=String.valueOf(a2_s);
-            final String a2_b_v=String.valueOf(a2_b);
+            final String a2_nom_v=String.valueOf(a2_nom.getText());
+            final String a2_cos_v=String.valueOf(a2_cos.getText());
+            final String a2_ca_v=String.valueOf(a2_ca.getText());
+            final String a2_mg_v=String.valueOf(a2_mg.getText());
+            final String a2_k_v=String.valueOf(a2_k.getText());
+            final String a2_n_v=String.valueOf(a2_n.getText());
+            final String a2_p_v=String.valueOf(a2_p.getText());
+            final String a2_fe_v=String.valueOf(a2_fe.getText());
+            final String a2_mn_v=String.valueOf(a2_mn.getText());
+            final String a2_cu_v=String.valueOf(a2_cu.getText());
+            final String a2_zn_v=String.valueOf(a2_zn.getText());
+            final String a2_s_v=String.valueOf(a2_s.getText());
+            final String a2_b_v=String.valueOf(a2_b.getText());
 
-            final String a3_nom_v=String.valueOf(a3_nom);
-            final String a3_cos_v=String.valueOf(a3_cos);
-            final String a3_ca_v=String.valueOf(a3_ca);
-            final String a3_mg_v=String.valueOf(a3_mg);
-            final String a3_k_v=String.valueOf(a3_k);
-            final String a3_n_v=String.valueOf(a3_n);
-            final String a3_p_v=String.valueOf(a3_p);
-            final String a3_fe_v=String.valueOf(a3_fe);
-            final String a3_mn_v=String.valueOf(a3_mn);
-            final String a3_cu_v=String.valueOf(a3_cu);
-            final String a3_zn_v=String.valueOf(a3_zn);
-            final String a3_s_v=String.valueOf(a3_s);
-            final String a3_b_v=String.valueOf(a3_b);
+            final String a3_nom_v=String.valueOf(a3_nom.getText());
+            final String a3_cos_v=String.valueOf(a3_cos.getText());
+            final String a3_ca_v=String.valueOf(a3_ca.getText());
+            final String a3_mg_v=String.valueOf(a3_mg.getText());
+            final String a3_k_v=String.valueOf(a3_k.getText());
+            final String a3_n_v=String.valueOf(a3_n.getText());
+            final String a3_p_v=String.valueOf(a3_p.getText());
+            final String a3_fe_v=String.valueOf(a3_fe.getText());
+            final String a3_mn_v=String.valueOf(a3_mn.getText());
+            final String a3_cu_v=String.valueOf(a3_cu.getText());
+            final String a3_zn_v=String.valueOf(a3_zn.getText());
+            final String a3_s_v=String.valueOf(a3_s.getText());
+            final String a3_b_v=String.valueOf(a3_b.getText());
 
-            final String cosca_v=String.valueOf(cosca);
-            final String densi_v=String.valueOf(densi);
-            final String espes_v=String.valueOf(espes);
-            final String produ_v=String.valueOf(produ);
-            final String arbha_v=String.valueOf(arbha);
+            final String cosca_v=String.valueOf(cosca.getText());
+            final String densi_v=String.valueOf(densi.getText());
+            final String espes_v=String.valueOf(espes.getText());
+            final String produ_v=String.valueOf(produ.getText());
+            final String arbha_v=String.valueOf(arbha.getText());
 
-            final String rega_v=String.valueOf(c_rega);
-            final String polisulfato_v=String.valueOf(c_polisulfato);
-            final String high_complete_v=String.valueOf(c_high_complete);
-            final String nitrabor_v=String.valueOf(c_nitrabor);
-            final String high_k_v=String.valueOf(c_high_k);
-            final String granumax_s_v=String.valueOf(c_granumax_s);
-            final String hydran_v=String.valueOf(c_hydran);
-            final String colono_v=String.valueOf(c_colono_15_5_20);
-            final String dap_v=String.valueOf(c_dap);
-            final String kicerita_v=String.valueOf(c_kicerita);
-            final String dolomita_v=String.valueOf(c_dolomita);
-            final String micromix_forte_v=String.valueOf(c_micromix_forte);
-            final String enmienda1_v=String.valueOf(c_enmienda1);
-            final String kcl_v=String.valueOf(c_kcl);
-            final String kmag_v=String.valueOf(c_kmag);
-            final String urea_v=String.valueOf(c_urea_x);
-            final String boro_v=String.valueOf(c_boro);
-            final String magnesamon_v=String.valueOf(c_Magnesamon);
+            final String rega_v=String.valueOf(c_rega.getText());
+            final String polisulfato_v=String.valueOf(c_polisulfato.getText());
+            final String high_complete_v=String.valueOf(c_high_complete.getText());
+            final String nitrabor_v=String.valueOf(c_nitrabor.getText());
+            final String high_k_v=String.valueOf(c_high_k.getText());
+            final String granumax_s_v=String.valueOf(c_granumax_s.getText());
+            final String hydran_v=String.valueOf(c_hydran.getText());
+            final String colono_v=String.valueOf(c_colono_15_5_20.getText());
+            final String dap_v=String.valueOf(c_dap.getText());
+            final String kicerita_v=String.valueOf(c_kicerita.getText());
+            final String dolomita_v=String.valueOf(c_dolomita.getText());
+            final String micromix_forte_v=String.valueOf(c_micromix_forte.getText());
+            final String enmienda1_v=String.valueOf(c_enmienda1.getText());
+            final String kcl_v=String.valueOf(c_kcl.getText());
+            final String kmag_v=String.valueOf(c_kmag.getText());
+            final String urea_v=String.valueOf(c_urea_x.getText());
+            final String boro_v=String.valueOf(c_boro.getText());
+            final String magnesamon_v=String.valueOf(c_Magnesamon.getText());
 
-            final String e1_ca_v=String.valueOf(e1_ca);
-            final String e1_mg_v=String.valueOf(e1_mg);
-            final String e1_k_v=String.valueOf(e1_k);
-            final String e1_n_v=String.valueOf(e1_n);
-            final String e1_p_v=String.valueOf(e1_p);
-            final String e1_fe_v=String.valueOf(e1_fe);
-            final String e1_mn_v=String.valueOf(e1_mn);
-            final String e1_zn_v=String.valueOf(e1_zn);
-            final String e1_cu_v=String.valueOf(e1_cu);
-            final String e1_s_v=String.valueOf(e1_s);
-            final String e1_b_v=String.valueOf(e1_b);
+            final String e1_ca_v=String.valueOf(e1_ca.getText());
+            final String e1_mg_v=String.valueOf(e1_mg.getText());
+            final String e1_k_v=String.valueOf(e1_k.getText());
+            final String e1_n_v=String.valueOf(e1_n.getText());
+            final String e1_p_v=String.valueOf(e1_p.getText());
+            final String e1_fe_v=String.valueOf(e1_fe.getText());
+            final String e1_mn_v=String.valueOf(e1_mn.getText());
+            final String e1_zn_v=String.valueOf(e1_zn.getText());
+            final String e1_cu_v=String.valueOf(e1_cu.getText());
+            final String e1_s_v=String.valueOf(e1_s.getText());
+            final String e1_b_v=String.valueOf(e1_b.getText());
 
-            final String e2_ca_v=String.valueOf(e2_ca);
-            final String e2_mg_v=String.valueOf(e2_mg);
-            final String e2_k_v=String.valueOf(e2_k);
-            final String e2_n_v=String.valueOf(e2_n);
-            final String e2_p_v=String.valueOf(e2_p);
-            final String e2_fe_v=String.valueOf(e2_fe);
-            final String e2_mn_v=String.valueOf(e2_mn);
-            final String e2_zn_v=String.valueOf(e2_zn);
-            final String e2_cu_v=String.valueOf(e2_cu);
-            final String e2_s_v=String.valueOf(e2_s);
-            final String e2_b_v=String.valueOf(e2_b);
+            final String e2_ca_v=String.valueOf(e2_ca.getText());
+            final String e2_mg_v=String.valueOf(e2_mg.getText());
+            final String e2_k_v=String.valueOf(e2_k.getText());
+            final String e2_n_v=String.valueOf(e2_n.getText());
+            final String e2_p_v=String.valueOf(e2_p.getText());
+            final String e2_fe_v=String.valueOf(e2_fe.getText());
+            final String e2_mn_v=String.valueOf(e2_mn.getText());
+            final String e2_zn_v=String.valueOf(e2_zn.getText());
+            final String e2_cu_v=String.valueOf(e2_cu.getText());
+            final String e2_s_v=String.valueOf(e2_s.getText());
+            final String e2_b_v=String.valueOf(e2_b.getText());
 
-            final String e3_ca_v=String.valueOf(e3_ca);
-            final String e3_mg_v=String.valueOf(e3_mg);
-            final String e3_k_v=String.valueOf(e3_k);
-            final String e3_n_v=String.valueOf(e3_n);
-            final String e3_p_v=String.valueOf(e3_p);
-            final String e3_fe_v=String.valueOf(e3_fe);
-            final String e3_mn_v=String.valueOf(e3_mn);
-            final String e3_zn_v=String.valueOf(e3_zn);
-            final String e3_cu_v=String.valueOf(e3_cu);
-            final String e3_s_v=String.valueOf(e3_s);
-            final String e3_b_v=String.valueOf(e3_b);
+            final String e3_ca_v=String.valueOf(e3_ca.getText());
+            final String e3_mg_v=String.valueOf(e3_mg.getText());
+            final String e3_k_v=String.valueOf(e3_k.getText());
+            final String e3_n_v=String.valueOf(e3_n.getText());
+            final String e3_p_v=String.valueOf(e3_p.getText());
+            final String e3_fe_v=String.valueOf(e3_fe.getText());
+            final String e3_mn_v=String.valueOf(e3_mn.getText());
+            final String e3_zn_v=String.valueOf(e3_zn.getText());
+            final String e3_cu_v=String.valueOf(e3_cu.getText());
+            final String e3_s_v=String.valueOf(e3_s.getText());
+            final String e3_b_v=String.valueOf(e3_b.getText());
 
-            final String e4_ca_v=String.valueOf(e4_ca);
-            final String e4_mg_v=String.valueOf(e4_mg);
-            final String e4_k_v=String.valueOf(e4_k);
-            final String e4_n_v=String.valueOf(e4_n);
-            final String e4_p_v=String.valueOf(e4_p);
-            final String e4_fe_v=String.valueOf(e4_fe);
-            final String e4_mn_v=String.valueOf(e4_mn);
-            final String e4_zn_v=String.valueOf(e4_zn);
-            final String e4_cu_v=String.valueOf(e4_cu);
-            final String e4_s_v=String.valueOf(e4_s);
-            final String e4_b_v=String.valueOf(e4_b);
+            final String e4_ca_v=String.valueOf(e4_ca.getText());
+            final String e4_mg_v=String.valueOf(e4_mg.getText());
+            final String e4_k_v=String.valueOf(e4_k.getText());
+            final String e4_n_v=String.valueOf(e4_n.getText());
+            final String e4_p_v=String.valueOf(e4_p.getText());
+            final String e4_fe_v=String.valueOf(e4_fe.getText());
+            final String e4_mn_v=String.valueOf(e4_mn.getText());
+            final String e4_zn_v=String.valueOf(e4_zn.getText());
+            final String e4_cu_v=String.valueOf(e4_cu.getText());
+            final String e4_s_v=String.valueOf(e4_s.getText());
+            final String e4_b_v=String.valueOf(e4_b.getText());
 
             // integracion python
 
@@ -446,18 +446,63 @@ public class MainActivity extends AppCompatActivity {
 
                     // debe ser una cadena con 50 valores
 
-                    final PyObject intdata = pyobj.callAttr("intdata", cada, mgda, kda, nda, pda, feda, mnda, cuda, znda, sda, bda, a1_nom_v);
+                    final PyObject intdata = pyobj.callAttr("intdata", cada, mgda, kda, nda, pda, feda, mnda, cuda, znda, sda, bda,
+                            a1_nom_v, a1_cos_v, a1_ca_v, a1_mg_v, a1_k_v, a1_n_v, a1_p_v, a1_fe_v, a1_mn_v, a1_cu_v, a1_zn_v, a1_s_v,a1_b_v,
+                            a2_nom_v, a2_cos_v, a2_ca_v, a2_mg_v, a2_k_v, a2_n_v, a2_p_v, a2_fe_v, a2_mn_v, a2_cu_v, a2_zn_v, a2_s_v,a2_b_v,
+                            a3_nom_v, a3_cos_v, a3_ca_v, a3_mg_v, a3_k_v, a3_n_v, a3_p_v, a3_fe_v, a3_mn_v, a3_cu_v, a3_zn_v, a3_s_v,a3_b_v,
+                            cosca_v, densi_v, espes_v, produ_v, arbha_v, rega_v, polisulfato_v,high_complete_v, nitrabor_v, high_k_v,granumax_s_v,
+                            hydran_v, colono_v, dap_v, kicerita_v, dolomita_v, micromix_forte_v, enmienda1_v, kcl_v, kmag_v, urea_v,boro_v, magnesamon_v,
+                            e1_ca_v, e1_mg_v, e1_k_v, e1_n_v, e1_p_v, e1_fe_v, e1_mn_v, e1_zn_v, e1_cu_v, e1_s_v, e1_b_v,
+                            e2_ca_v, e2_mg_v, e2_k_v, e2_n_v, e2_p_v, e2_fe_v, e2_mn_v, e2_zn_v, e2_cu_v, e2_s_v, e2_b_v,
+                            e3_ca_v, e3_mg_v, e3_k_v, e3_n_v, e3_p_v, e3_fe_v, e3_mn_v, e3_zn_v, e3_cu_v, e3_s_v, e3_b_v,
+                            e4_ca_v, e4_mg_v, e4_k_v, e4_n_v, e4_p_v, e4_fe_v, e4_mn_v, e4_zn_v, e4_cu_v, e4_s_v, e4_b_v);
                     // Stuff that updates the UI
 
                     datos = intdata.toString();
-                    String datos1=datos.replace("[", "").replace("]", "");
+                    String datos1=datos.replace("[", "").replace("]", "").replace("'","").replace("(","").replace(")","");
 
                     resultado= datos1.split(",");
-                    Tx1.setText("Se recomiendan las siguientes cantidades de abono:"+"\n"+"\n"+
-                            "NITRABOR= "+resultado[0]+" kg/ha"+"\n"+"REGA= "+resultado[1]+" kg/ha"+"\n"+"POLISULFATO= "+resultado[2]+" kg/ha"+"\n"
-                            +"HIGH COMPLETE= "+resultado[3]+" kg/ha" +"\n"+"HIGH K= "+resultado[4]+" kg/ha"+"\n"+"GRANUMAX S= "+resultado[5]+
-                            " kg/ha"+"\n"+"HYDRAN= "+resultado[6]+" kg/ha"+"\n"+"COLONO 25-5-20= "+resultado[7]+" kg/ha"+"\n"+"DAP= "+resultado[8]+" kg/ha"
-                            +"\n"+"KICERITA= "+resultado[9]+" kg/ha"+"\n"+"DOLOMITA= "+resultado[10]+" kg/ha"+"\n"+"MICROMIX FORTE= "+resultado[11]+" kg/ha");
+
+                    float cosfin=Float.parseFloat(resultado[172])+Float.parseFloat(resultado[173])+Float.parseFloat(resultado[174])+Float.parseFloat(resultado[175]);
+
+                    Tx1.setText("RESULTADOS"+"\n"+"\n"+"Con un costo en abono anual estimado de B/."+cosfin+" se recomiendan las siguientes cantidades de abono en 4 aplicaciones:"+"\n"+"\n"+
+                            "APLICACIÓN 1"+"\n"+"\n"+"Se estima un costo en abono de B/."+resultado[172]+" y un costo en neutralizar de B/."+resultado[176]+"\n"
+                            +"Para lograr el aporte necesario aplicar"+resultado[168]+" kg/ha de abono, de una mezcla con las siguientes cantidades:"+"\n"+
+                            resultado[84]+"= "+resultado[0]+" kg/ha"+"\n"+ resultado[85]+"= "+resultado[1]+" kg/ha"+"\n"+resultado[86]+"= "+resultado[2]+" kg/ha"+"\n"
+                            +resultado[87]+"= "+resultado[3]+" kg/ha" +"\n"+resultado[88]+"= "+resultado[4]+" kg/ha"+"\n"+resultado[89]+"= "+resultado[5]+" kg/ha"+"\n"
+                            +resultado[90]+"= "+resultado[6]+" kg/ha"+"\n"+resultado[91]+"= "+resultado[7]+" kg/ha"+"\n"+resultado[92]+"= "+resultado[8]+" kg/ha" +"\n"
+                            +resultado[93]+"= "+resultado[9]+" kg/ha"+"\n"+resultado[94]+"= "+resultado[10]+" kg/ha"+"\n"+resultado[95]+"= "+resultado[11]+" kg/ha"+"\n"
+                            +resultado[96]+"= "+resultado[12]+" kg/ha"+"\n"+resultado[97]+"= "+resultado[13]+" kg/ha"+"\n"+resultado[98]+"= "+resultado[14]+" kg/ha"+"\n"
+                            +resultado[99]+"= "+resultado[15]+" kg/ha"+"\n"+resultado[100]+"= "+resultado[16]+" kg/ha"+"\n"+resultado[101]+"= "+resultado[17]+" kg/ha"+"\n"
+                            +resultado[102]+"= "+resultado[18]+" kg/ha"+"\n"+resultado[103]+"= "+resultado[19]+" kg/ha"+"\n"+resultado[104]+"= "+resultado[20]+" kg/ha"+"\n"+"\n"
+                            +"APLICACIÓN 2"+"\n"+"\n"+"Se estima un costo en abono de B/."+resultado[173]+" y un costo en neutralizar de B/."+resultado[177]+"\n"
+                            +"Para lograr el aporte necesario aplicar"+resultado[169]+" kg/ha de abono, de una mezcla con las siguientes cantidades:"+"\n"
+                            +resultado[105]+"= "+resultado[21]+" kg/ha"+"\n"+resultado[106]+"= "+resultado[22]+" kg/ha"+"\n"+resultado[107]+"= "+resultado[23]+" kg/ha"+"\n"
+                            +resultado[108]+"= "+resultado[24]+" kg/ha"+"\n"+resultado[109]+"= "+resultado[25]+" kg/ha"+"\n"+resultado[110]+"= "+resultado[26]+" kg/ha"+"\n"
+                            +resultado[111]+"= "+resultado[27]+" kg/ha"+"\n"+resultado[112]+"= "+resultado[28]+" kg/ha"+"\n"+resultado[113]+"= "+resultado[29]+" kg/ha"+"\n"
+                            +resultado[114]+"= "+resultado[30]+" kg/ha"+"\n"+resultado[115]+"= "+resultado[31]+" kg/ha"+"\n"+resultado[116]+"= "+resultado[32]+" kg/ha"+"\n"
+                            +resultado[117]+"= "+resultado[33]+" kg/ha"+"\n"+resultado[118]+"= "+resultado[34]+" kg/ha"+"\n"+resultado[119]+"= "+resultado[35]+" kg/ha"+"\n"
+                            +resultado[120]+"= "+resultado[36]+" kg/ha"+"\n"+resultado[121]+"= "+resultado[37]+" kg/ha"+"\n"+resultado[122]+"= "+resultado[38]+" kg/ha"+"\n"
+                            +resultado[123]+"= "+resultado[39]+" kg/ha"+"\n"+resultado[124]+"= "+resultado[40]+" kg/ha"+"\n"+resultado[125]+"= "+resultado[41]+" kg/ha"+"\n"+"\n"
+                            +"APLICACIÓN 3"+"\n"+"\n"+"Se estima un costo en abono de B/."+resultado[174]+" y un costo en neutralizar de B/."+resultado[178]+"\n"
+                            +"Para lograr el aporte necesario aplicar"+resultado[170]+" kg/ha de abono, de una mezcla con las siguientes cantidades:"+"\n"
+                            +resultado[126]+"= "+resultado[42]+" kg/ha"+"\n"+resultado[127]+"= "+resultado[43]+" kg/ha"+"\n"+resultado[128]+"= "+resultado[44]+" kg/ha"+"\n"
+                            +resultado[129]+"= "+resultado[45]+" kg/ha"+"\n"+resultado[130]+"= "+resultado[46]+" kg/ha"+"\n"+resultado[131]+"= "+resultado[47]+" kg/ha"+"\n"
+                            +resultado[132]+"= "+resultado[48]+" kg/ha"+"\n"+resultado[133]+"= "+resultado[49]+" kg/ha"+"\n"+resultado[134]+"= "+resultado[50]+" kg/ha"+"\n"
+                            +resultado[135]+"= "+resultado[51]+" kg/ha"+"\n"+resultado[136]+"= "+resultado[52]+" kg/ha"+"\n"+resultado[137]+"= "+resultado[53]+" kg/ha"+"\n"
+                            +resultado[138]+"= "+resultado[54]+" kg/ha"+"\n"+resultado[139]+"= "+resultado[55]+" kg/ha"+"\n"+resultado[140]+"= "+resultado[56]+" kg/ha"+"\n"
+                            +resultado[141]+"= "+resultado[57]+" kg/ha"+"\n"+resultado[142]+"= "+resultado[58]+" kg/ha"+"\n"+resultado[143]+"= "+resultado[59]+" kg/ha"+"\n"
+                            +resultado[144]+"= "+resultado[60]+" kg/ha"+"\n"+resultado[145]+"= "+resultado[61]+" kg/ha"+"\n"+resultado[146]+"= "+resultado[62]+" kg/ha"+"\n"+"\n"
+                            +"APLICACIÓN 4"+"\n"+"\n"+"Se estima un costo en abono de B/."+resultado[175]+" y un costo en neutralizar de B/."+resultado[179]+"\n"
+                            +"Para lograr el aporte necesario aplicar"+resultado[171]+" kg/ha de abono, de una mezcla con las siguientes cantidades:"+"\n"
+                            +resultado[147]+"= "+resultado[63]+" kg/ha"+"\n"+resultado[148]+"= "+resultado[64]+" kg/ha"+"\n"+resultado[149]+"= "+resultado[65]+" kg/ha"+"\n"
+                            +resultado[150]+"= "+resultado[66]+" kg/ha"+"\n"+resultado[151]+"= "+resultado[67]+" kg/ha"+"\n"+resultado[152]+"= "+resultado[68]+" kg/ha"+"\n"
+                            +resultado[153]+"= "+resultado[69]+" kg/ha"+"\n"+resultado[154]+"= "+resultado[70]+" kg/ha"+"\n"+resultado[155]+"= "+resultado[71]+" kg/ha"+"\n"
+                            +resultado[156]+"= "+resultado[72]+" kg/ha"+"\n"+resultado[157]+"= "+resultado[73]+" kg/ha"+"\n"+resultado[158]+"= "+resultado[74]+" kg/ha"+"\n"
+                            +resultado[159]+"= "+resultado[75]+" kg/ha"+"\n"+resultado[160]+"= "+resultado[76]+" kg/ha"+"\n"+resultado[161]+"= "+resultado[77]+" kg/ha"+"\n"
+                            +resultado[162]+"= "+resultado[78]+" kg/ha"+"\n"+resultado[163]+"= "+resultado[79]+" kg/ha"+"\n"+resultado[164]+"= "+resultado[80]+" kg/ha"+"\n"
+                            +resultado[165]+"= "+resultado[81]+" kg/ha"+"\n"+resultado[166]+"= "+resultado[82]+" kg/ha"+"\n"+resultado[167]+"= "+resultado[83]+" kg/ha"+"\n"
+                    );
 
                     text2.setText(R.string.nota);
                 }

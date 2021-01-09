@@ -3,41 +3,44 @@
 #considerando un set de requerimientos de elementos
 #jose.gallardo@utp.ac.pa  octubre/2020
 
-def intdata (cada,mgda,kda,nda,pda,feda,mnda,cuda,znda,sda,bda,a1_nom):
 
-    global caval
-    global mgval
-    global kval
-    global nval
-    global pval
-    global feval
-    global mnval
-    global cuval
-    global znval
-    global sval
-    global bval
-
-    global a1_nom_v
+def intdata (cada,mgda,kda,nda,pda,feda,mnda,cuda,znda,sda,bda,
+a1_nom_v, a1_cos_v, a1_ca_v, a1_mg_v, a1_k_v, a1_n_v, a1_p_v, a1_fe_v, a1_mn_v, a1_cu_v, a1_zn_v, a1_s_v,a1_b_v,
+a2_nom_v, a2_cos_v, a2_ca_v, a2_mg_v, a2_k_v, a2_n_v, a2_p_v, a2_fe_v, a2_mn_v, a2_cu_v, a2_zn_v, a2_s_v,a2_b_v,
+a3_nom_v, a3_cos_v, a3_ca_v, a3_mg_v, a3_k_v, a3_n_v, a3_p_v, a3_fe_v, a3_mn_v, a3_cu_v, a3_zn_v, a3_s_v,a3_b_v,
+cosca_v, densi_v, espes_v, produ_v, arbha_v, rega_v, polisulfato_v,high_complete_v, nitrabor_v, high_k_v,granumax_s_v,
+hydran_v, colono_v, dap_v, kicerita_v, dolomita_v, micromix_forte_v, enmienda1_v, kcl_v, kmag_v, urea_v,boro_v, magnesamon_v,
+e1_ca_v, e1_mg_v, e1_k_v, e1_n_v, e1_p_v, e1_fe_v, e1_mn_v, e1_zn_v, e1_cu_v, e1_s_v, e1_b_v,
+e2_ca_v, e2_mg_v, e2_k_v, e2_n_v, e2_p_v, e2_fe_v, e2_mn_v, e2_zn_v, e2_cu_v, e2_s_v, e2_b_v,
+e3_ca_v, e3_mg_v, e3_k_v, e3_n_v, e3_p_v, e3_fe_v, e3_mn_v, e3_zn_v, e3_cu_v, e3_s_v, e3_b_v,
+e4_ca_v, e4_mg_v, e4_k_v, e4_n_v, e4_p_v, e4_fe_v, e4_mn_v, e4_zn_v, e4_cu_v, e4_s_v, e4_b_v):
 
     lista1=[]
     lista2=[]
     lista3=[]
+    lista4=[]
+    lista5=[]
 
     #_______________
 
-    caval= float(cada)
-    mgval= float(mgda)
-    kval= float(kda)
-    nval= float(nda)
-    pval= float(pda)
-    feval= float(feda)
-    mnval= float(mnda)
-    cuval= float(cuda)
-    znval= float(znda)
-    sval= float(sda)
-    bval= float(bda)
+    cada= float(cada)
+    mgda= float(mgda)
+    kda= float(kda)
+    nda= float(nda)
+    pda= float(pda)
+    feda= float(feda)
+    mnda= float(mnda)
+    cuda= float(cuda)
+    znda= float(znda)
+    sda= float(sda)
+    bda= float(bda)
 
-    a1_nom_v= str(a1_nom)
+    e1_ca_v=float(e1_ca_v)
+    e1_mg_v=float(e1_mg_v)
+
+    a1_cos_v= float(a1_cos_v)
+
+    
 
     #SECCION 0000000000000000000000000000000000000000000000000000000000000000000000
     # DATOS CONSTANTES
@@ -317,7 +320,7 @@ def intdata (cada,mgda,kda,nda,pda,feda,mnda,cuda,znda,sda,bda,a1_nom):
     'Mg':[0.35,0.35,0.15,0.15],
     'K':[0.05,0.05,0.45,0.45],
     'P':[0.25,0.25,0.25,0.25],
-    'N':[0.25,0.35,0.20,0.2], 
+    'N':[0.25,0.35,0.20,0.20], 
     'Fe':[0.25,0.25,0.25,0.25],
     'Mn':[0.05,0.25,0.35,0.35],
     'Cu':[0.05,0.25,0.35,0.35],
@@ -415,17 +418,17 @@ def intdata (cada,mgda,kda,nda,pda,feda,mnda,cuda,znda,sda,bda,a1_nom):
 
     #ingrese los resultados de estudios de suelos con sus unidades
     contenido_existente={
-    'Ca':{'contenido':0.9,'unidades':'cmol+/kg_suelo'},
-    'Mg':{'contenido':0.16,'unidades':'cmol+/kg_suelo'},
-    'K':{'contenido':0.060,'unidades':'cmol+/kg_suelo'},
-    'N':{'contenido':1.1,'unidades':'mg/L'}, 
-    'P':{'contenido':3.3,'unidades':'mg/kg_suelo'},
-    'Fe':{'contenido':18.0,'unidades':'mg/kg_suelo'},
-    'Mn':{'contenido':2.4,'unidades':'mg/kg_suelo'},
-    'Cu':{'contenido':1.5,'unidades':'mg/kg_suelo'},
-    'Zn':{'contenido':2.3,'unidades':'mg/kg_suelo'},
-    'S':{'contenido':0,'unidades':'%'}  ,  
-    'B':{'contenido':0,'unidades':'%'}                          
+    'Ca':{'contenido':cada,'unidades':'cmol+/kg_suelo'},
+    'Mg':{'contenido':mgda,'unidades':'cmol+/kg_suelo'},
+    'K':{'contenido':kda,'unidades':'cmol+/kg_suelo'},
+    'N':{'contenido':nda,'unidades':'mg/L'}, 
+    'P':{'contenido':pda,'unidades':'mg/kg_suelo'},
+    'Fe':{'contenido':feda,'unidades':'mg/kg_suelo'},
+    'Mn':{'contenido':mnda,'unidades':'mg/kg_suelo'},
+    'Cu':{'contenido':cuda,'unidades':'mg/kg_suelo'},
+    'Zn':{'contenido':znda,'unidades':'mg/kg_suelo'},
+    'S':{'contenido':sda,'unidades':'%'}  ,  
+    'B':{'contenido':bda,'unidades':'%'}                          
     }
 
     def calcular_aporte_aplicacion(aporte_construccion,
@@ -504,21 +507,29 @@ def intdata (cada,mgda,kda,nda,pda,feda,mnda,cuda,znda,sda,bda,a1_nom):
 
                 #mod
                 cantidades[k] = round(cantidades[k],2)
+                kg_total=round(kg_total,2)
                 lista1.append(cantidades[k])
                 lista2.append(k)
-
-
+                
+            #mod
+            costo_abono=round(costo_abono,2)
+            lista3.append(kg_total)
+            lista4.append(costo_abono)
+            lista5.append(costo_CaCO3)
+            
             print("------------------------------------------------")
             print("APLICACION ",n_aplicacion)
             print("para lograr el aporte necesario:")
             print(aporte_necesario)
             print()
-            print("aplicar: ",round(kg_total,2)," kg/ha de una mezcla con las",
+            print("aplicar: ",kg_total," kg/ha de una mezcla con las",
                 "siguientes cantidades",cantidades)
             print("costo abono",costo_abono," costo neutralizar",costo_CaCO3)
             costo_anual += costo
 
-        print("COSTO ANUAL:",costo_anual)
+
+
+        print("COSTO ANUAL:",round(costo_anual,2))
         print("")
         print("NOTA IMPORTANTE:")
         print("Estas no son recomendaciones agronomicas, son solo c�lculos matem�ticos")
@@ -529,9 +540,34 @@ def intdata (cada,mgda,kda,nda,pda,feda,mnda,cuda,znda,sda,bda,a1_nom):
         #mod
         print("lista 1= ", lista1)
         print("lista 2= ", lista2)
+        print("lista 3= ", lista3)
+        print("lista 4= ", lista4)
+        print("lista 5= ", lista5)
+        print("prueba= ", mgda)
 
     main()
 
-    return lista1
+    return lista1, lista2, lista3, lista4, lista5
 
-intdata(8.57,1.62,0.60,10.8,32.65,178.38,23.85,15.35,23.30,0,0,0)
+#MOD
+# cada,mgda,kda,nda,pda,feda,mnda,cuda,znda,sda,bda, 
+# a1_nom_v, a1_cos_v, a1_ca_v, a1_mg_v, a1_k_v, a1_n_v, a1_p_v, a1_fe_v, a1_mn_v, a1_cu_v, a1_zn_v, a1_s_v,a1_b_v,
+# a2_nom_v, a2_cos_v, a2_ca_v, a2_mg_v, a2_k_v, a2_n_v, a2_p_v, a2_fe_v, a2_mn_v, a2_cu_v, a2_zn_v, a2_s_v,a2_b_v,
+# a3_nom_v, a3_cos_v, a3_ca_v, a3_mg_v, a3_k_v, a3_n_v, a3_p_v, a3_fe_v, a3_mn_v, a3_cu_v, a3_zn_v, a3_s_v,a3_b_v,
+# cosca_v, densi_v, espes_v, produ_v, 
+# arbha_v, rega_v, polisulfato_v,high_complete_v, nitrabor_v, high_k_v,granumax_s_v,
+# hydran_v, colono_v, dap_v, kicerita_v, dolomita_v, micromix_forte_v, enmienda1_v, kcl_v, kmag_v, urea_v,boro_v, magnesamon_v,
+# e1_ca_v, e1_mg_v, e1_k_v, e1_n_v, e1_p_v, e1_fe_v, e1_mn_v, e1_zn_v, e1_cu_v, e1_s_v, e1_b_v,
+# e2_ca_v, e2_mg_v, e2_k_v, e2_n_v, e2_p_v, e2_fe_v, e2_mn_v, e2_zn_v, e2_cu_v, e2_s_v, e2_b_v,
+# e3_ca_v, e3_mg_v, e3_k_v, e3_n_v, e3_p_v, e3_fe_v, e3_mn_v, e3_zn_v, e3_cu_v, e3_s_v, e3_b_v,
+# e4_ca_v, e4_mg_v, e4_k_v, e4_n_v, e4_p_v, e4_fe_v, e4_mn_v, e4_zn_v, e4_cu_v, e4_s_v, e4_b_v
+#8.57,1.62,0.60,10.8,32.65,178.38,23.85,15.35,23.30,0,0,
+
+# intdata(0.9,0.16,0.06,1.1,3.3,18,2.4,1.5,2.3,0,0,
+# 100,1,0,0,0,0,0,0,0,0,0,0,0,200,1,0,0,0,0,0,0,0,0,0,0,0,300,1,0,0,0,0,0,0,0,0,0,0,0,
+# 0.10, 1200, 0.2, 1800, 3000, 
+# 0.8,0.58,0.6,0.7,0.6,0.5,0.6,0.6,0.5,0.36,0.36,0.8,0.32,0.42,0.59,0.46,16.25,0.37,
+# 0.35,0.35,0.05,0.25,0.25,0.25,0.05,0.05,0.05,0.25,0.05,
+# 0.30,0.35,0.05,0.25,0.35,0.25,0.25,0.25,0.25,0.25,0.25,
+# 0.15,0.15,0.45,0.25,0.20,0.25,0.35,0.35,0.35,0.25,0.35,
+# 0.20,0.15,0.45,0.25,0.20,0.25,0.35,0.35,0.35,0.25,0.35)
