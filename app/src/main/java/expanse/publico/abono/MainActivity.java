@@ -447,9 +447,9 @@ public class MainActivity extends AppCompatActivity {
                     // debe ser una cadena con 50 valores
 
                     final PyObject intdata = pyobj.callAttr("intdata", cada, mgda, kda, nda, pda, feda, mnda, cuda, znda, sda, bda,
-                            a1_nom_v, a1_cos_v, a1_ca_v, a1_mg_v, a1_k_v, a1_n_v, a1_p_v, a1_fe_v, a1_mn_v, a1_cu_v, a1_zn_v, a1_s_v,a1_b_v,
-                            a2_nom_v, a2_cos_v, a2_ca_v, a2_mg_v, a2_k_v, a2_n_v, a2_p_v, a2_fe_v, a2_mn_v, a2_cu_v, a2_zn_v, a2_s_v,a2_b_v,
-                            a3_nom_v, a3_cos_v, a3_ca_v, a3_mg_v, a3_k_v, a3_n_v, a3_p_v, a3_fe_v, a3_mn_v, a3_cu_v, a3_zn_v, a3_s_v,a3_b_v,
+                            10, a1_cos_v, a1_ca_v, a1_mg_v, a1_k_v, a1_n_v, a1_p_v, a1_fe_v, a1_mn_v, a1_cu_v, a1_zn_v, a1_s_v,a1_b_v,
+                            10, a2_cos_v, a2_ca_v, a2_mg_v, a2_k_v, a2_n_v, a2_p_v, a2_fe_v, a2_mn_v, a2_cu_v, a2_zn_v, a2_s_v,a2_b_v,
+                            10, a3_cos_v, a3_ca_v, a3_mg_v, a3_k_v, a3_n_v, a3_p_v, a3_fe_v, a3_mn_v, a3_cu_v, a3_zn_v, a3_s_v,a3_b_v,
                             cosca_v, densi_v, espes_v, produ_v, arbha_v, rega_v, polisulfato_v,high_complete_v, nitrabor_v, high_k_v,granumax_s_v,
                             hydran_v, colono_v, dap_v, kicerita_v, dolomita_v, micromix_forte_v, enmienda1_v, kcl_v, kmag_v, urea_v,boro_v, magnesamon_v,
                             e1_ca_v, e1_mg_v, e1_k_v, e1_n_v, e1_p_v, e1_fe_v, e1_mn_v, e1_zn_v, e1_cu_v, e1_s_v, e1_b_v,
@@ -474,7 +474,7 @@ public class MainActivity extends AppCompatActivity {
                             +resultado[93]+"= "+resultado[9]+" kg/ha"+"\n"+resultado[94]+"= "+resultado[10]+" kg/ha"+"\n"+resultado[95]+"= "+resultado[11]+" kg/ha"+"\n"
                             +resultado[96]+"= "+resultado[12]+" kg/ha"+"\n"+resultado[97]+"= "+resultado[13]+" kg/ha"+"\n"+resultado[98]+"= "+resultado[14]+" kg/ha"+"\n"
                             +resultado[99]+"= "+resultado[15]+" kg/ha"+"\n"+resultado[100]+"= "+resultado[16]+" kg/ha"+"\n"+resultado[101]+"= "+resultado[17]+" kg/ha"+"\n"
-                            +resultado[102]+"= "+resultado[18]+" kg/ha"+"\n"+resultado[103]+"= "+resultado[19]+" kg/ha"+"\n"+resultado[104]+"= "+resultado[20]+" kg/ha"+"\n"+"\n"
+                            +a1_nom_v+"= "+resultado[18]+" kg/ha"+"\n"+a2_nom_v+"= "+resultado[19]+" kg/ha"+"\n"+a3_nom_v+"= "+resultado[20]+" kg/ha"+"\n"+"\n"
                             +"APLICACIÓN 2"+"\n"+"\n"+"Se estima un costo en abono de B/."+resultado[173]+" y un costo en neutralizar de B/."+resultado[177]+"\n"
                             +"Para lograr el aporte necesario aplicar"+resultado[169]+" kg/ha de abono, de una mezcla con las siguientes cantidades:"+"\n"
                             +resultado[105]+"= "+resultado[21]+" kg/ha"+"\n"+resultado[106]+"= "+resultado[22]+" kg/ha"+"\n"+resultado[107]+"= "+resultado[23]+" kg/ha"+"\n"
@@ -483,7 +483,7 @@ public class MainActivity extends AppCompatActivity {
                             +resultado[114]+"= "+resultado[30]+" kg/ha"+"\n"+resultado[115]+"= "+resultado[31]+" kg/ha"+"\n"+resultado[116]+"= "+resultado[32]+" kg/ha"+"\n"
                             +resultado[117]+"= "+resultado[33]+" kg/ha"+"\n"+resultado[118]+"= "+resultado[34]+" kg/ha"+"\n"+resultado[119]+"= "+resultado[35]+" kg/ha"+"\n"
                             +resultado[120]+"= "+resultado[36]+" kg/ha"+"\n"+resultado[121]+"= "+resultado[37]+" kg/ha"+"\n"+resultado[122]+"= "+resultado[38]+" kg/ha"+"\n"
-                            +resultado[123]+"= "+resultado[39]+" kg/ha"+"\n"+resultado[124]+"= "+resultado[40]+" kg/ha"+"\n"+resultado[125]+"= "+resultado[41]+" kg/ha"+"\n"+"\n"
+                            +a1_nom_v+"= "+resultado[39]+" kg/ha"+"\n"+a2_nom_v+"= "+resultado[40]+" kg/ha"+"\n"+a3_nom_v+"= "+resultado[41]+" kg/ha"+"\n"+"\n"
                             +"APLICACIÓN 3"+"\n"+"\n"+"Se estima un costo en abono de B/."+resultado[174]+" y un costo en neutralizar de B/."+resultado[178]+"\n"
                             +"Para lograr el aporte necesario aplicar"+resultado[170]+" kg/ha de abono, de una mezcla con las siguientes cantidades:"+"\n"
                             +resultado[126]+"= "+resultado[42]+" kg/ha"+"\n"+resultado[127]+"= "+resultado[43]+" kg/ha"+"\n"+resultado[128]+"= "+resultado[44]+" kg/ha"+"\n"
@@ -492,7 +492,7 @@ public class MainActivity extends AppCompatActivity {
                             +resultado[135]+"= "+resultado[51]+" kg/ha"+"\n"+resultado[136]+"= "+resultado[52]+" kg/ha"+"\n"+resultado[137]+"= "+resultado[53]+" kg/ha"+"\n"
                             +resultado[138]+"= "+resultado[54]+" kg/ha"+"\n"+resultado[139]+"= "+resultado[55]+" kg/ha"+"\n"+resultado[140]+"= "+resultado[56]+" kg/ha"+"\n"
                             +resultado[141]+"= "+resultado[57]+" kg/ha"+"\n"+resultado[142]+"= "+resultado[58]+" kg/ha"+"\n"+resultado[143]+"= "+resultado[59]+" kg/ha"+"\n"
-                            +resultado[144]+"= "+resultado[60]+" kg/ha"+"\n"+resultado[145]+"= "+resultado[61]+" kg/ha"+"\n"+resultado[146]+"= "+resultado[62]+" kg/ha"+"\n"+"\n"
+                            +a1_nom_v+"= "+resultado[60]+" kg/ha"+"\n"+a2_nom_v+"= "+resultado[61]+" kg/ha"+"\n"+a3_nom_v+"= "+resultado[62]+" kg/ha"+"\n"+"\n"
                             +"APLICACIÓN 4"+"\n"+"\n"+"Se estima un costo en abono de B/."+resultado[175]+" y un costo en neutralizar de B/."+resultado[179]+"\n"
                             +"Para lograr el aporte necesario aplicar"+resultado[171]+" kg/ha de abono, de una mezcla con las siguientes cantidades:"+"\n"
                             +resultado[147]+"= "+resultado[63]+" kg/ha"+"\n"+resultado[148]+"= "+resultado[64]+" kg/ha"+"\n"+resultado[149]+"= "+resultado[65]+" kg/ha"+"\n"
@@ -501,7 +501,7 @@ public class MainActivity extends AppCompatActivity {
                             +resultado[156]+"= "+resultado[72]+" kg/ha"+"\n"+resultado[157]+"= "+resultado[73]+" kg/ha"+"\n"+resultado[158]+"= "+resultado[74]+" kg/ha"+"\n"
                             +resultado[159]+"= "+resultado[75]+" kg/ha"+"\n"+resultado[160]+"= "+resultado[76]+" kg/ha"+"\n"+resultado[161]+"= "+resultado[77]+" kg/ha"+"\n"
                             +resultado[162]+"= "+resultado[78]+" kg/ha"+"\n"+resultado[163]+"= "+resultado[79]+" kg/ha"+"\n"+resultado[164]+"= "+resultado[80]+" kg/ha"+"\n"
-                            +resultado[165]+"= "+resultado[81]+" kg/ha"+"\n"+resultado[166]+"= "+resultado[82]+" kg/ha"+"\n"+resultado[167]+"= "+resultado[83]+" kg/ha"+"\n"
+                            +a1_nom_v+"= "+resultado[81]+" kg/ha"+"\n"+a2_nom_v+"= "+resultado[82]+" kg/ha"+"\n"+a3_nom_v+"= "+resultado[83]+" kg/ha"+"\n"
                     );
 
                     text2.setText(R.string.nota);

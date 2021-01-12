@@ -35,23 +35,128 @@ e4_ca_v, e4_mg_v, e4_k_v, e4_n_v, e4_p_v, e4_fe_v, e4_mn_v, e4_zn_v, e4_cu_v, e4
     sda= float(sda)
     bda= float(bda)
 
+    cosca_v=float(cosca_v)
+    densi_v=float(densi_v)
+    espes_v=float(espes_v)
+    produ_v=float(produ_v)
+    arbha_v=float(arbha_v)
+
+    rega_v=float(rega_v)
+    polisulfato_v=float(polisulfato_v)
+    high_complete_v=float(high_complete_v)
+    nitrabor_v=float(nitrabor_v)
+    high_k_v=float(high_k_v)
+    granumax_s_v=float(granumax_s_v)
+    hydran_v=float(hydran_v)
+    colono_v=float(colono_v)
+    dap_v=float(dap_v)
+    kicerita_v=float(kicerita_v)
+    dolomita_v=float(dolomita_v)
+    micromix_forte_v=float(micromix_forte_v)
+    enmienda1_v=float(enmienda1_v)
+    kcl_v=float(kcl_v)
+    kmag_v=float(kmag_v)
+    urea_v=float(urea_v)
+    boro_v=float(boro_v)
+    magnesamon_v=float(magnesamon_v)
+
     e1_ca_v=float(e1_ca_v)
     e1_mg_v=float(e1_mg_v)
+    e1_k_v=float(e1_k_v)
+    e1_n_v=float(e1_n_v)
+    e1_p_v=float(e1_p_v)
+    e1_fe_v=float(e1_fe_v)
+    e1_mn_v=float(e1_mn_v)
+    e1_cu_v=float(e1_cu_v)
+    e1_zn_v=float(e1_zn_v)
+    e1_s_v=float(e1_s_v)
+    e1_b_v=float(e1_b_v)
 
-    a1_cos_v= float(a1_cos_v)
+    e2_ca_v=float(e2_ca_v)
+    e2_mg_v=float(e2_mg_v)
+    e2_k_v=float(e2_k_v)
+    e2_n_v=float(e2_n_v)
+    e2_p_v=float(e2_p_v)
+    e2_fe_v=float(e2_fe_v)
+    e2_mn_v=float(e2_mn_v)
+    e2_cu_v=float(e2_cu_v)
+    e2_zn_v=float(e2_zn_v)
+    e2_s_v=float(e2_s_v)
+    e2_b_v=float(e2_b_v)
 
-    
+    e3_ca_v=float(e3_ca_v)
+    e3_mg_v=float(e3_mg_v)
+    e3_k_v=float(e3_k_v)
+    e3_n_v=float(e3_n_v)
+    e3_p_v=float(e3_p_v)
+    e3_fe_v=float(e3_fe_v)
+    e3_mn_v=float(e3_mn_v)
+    e3_cu_v=float(e3_cu_v)
+    e3_zn_v=float(e3_zn_v)
+    e3_s_v=float(e3_s_v)
+    e3_b_v=float(e3_b_v)
+
+    e4_ca_v=float(e4_ca_v)
+    e4_mg_v=float(e4_mg_v)
+    e4_k_v=float(e4_k_v)
+    e4_n_v=float(e4_n_v)
+    e4_p_v=float(e4_p_v)
+    e4_fe_v=float(e4_fe_v)
+    e4_mn_v=float(e4_mn_v)
+    e4_cu_v=float(e4_cu_v)
+    e4_zn_v=float(e4_zn_v)
+    e4_s_v=float(e4_s_v)
+    e4_b_v=float(e4_b_v)
+
+    a1_cos_v=float(a1_cos_v)
+    a1_ca_v=float(a1_ca_v)
+    a1_mg_v=float(a1_mg_v)
+    a1_k_v=float(a1_k_v)
+    a1_n_v=float(a1_n_v)
+    a1_p_v=float(a1_p_v)
+    a1_fe_v=float(a1_fe_v)
+    a1_mn_v=float(a1_mn_v)
+    a1_cu_v=float(a1_cu_v)
+    a1_zn_v=float(a1_zn_v)
+    a1_s_v=float(a1_s_v)
+    a1_b_v=float(a1_b_v)
+
+    a2_cos_v=float(a2_cos_v)
+    a2_ca_v=float(a2_ca_v)
+    a2_mg_v=float(a2_mg_v)
+    a2_k_v=float(a2_k_v)
+    a2_n_v=float(a2_n_v)
+    a2_p_v=float(a2_p_v)
+    a2_fe_v=float(a2_fe_v)
+    a2_mn_v=float(a2_mn_v)
+    a2_cu_v=float(a2_cu_v)
+    a2_zn_v=float(a2_zn_v)
+    a2_s_v=float(a2_s_v)
+    a2_b_v=float(a2_b_v)
+
+    a3_cos_v=float(a3_cos_v)
+    a3_ca_v=float(a3_ca_v)
+    a3_mg_v=float(a3_mg_v)
+    a3_k_v=float(a3_k_v)
+    a3_n_v=float(a3_n_v)
+    a3_p_v=float(a3_p_v)
+    a3_fe_v=float(a3_fe_v)
+    a3_mn_v=float(a3_mn_v)
+    a3_cu_v=float(a3_cu_v)
+    a3_zn_v=float(a3_zn_v)
+    a3_s_v=float(a3_s_v)
+    a3_b_v=float(a3_b_v)
 
     #SECCION 0000000000000000000000000000000000000000000000000000000000000000000000
     # DATOS CONSTANTES
-    costo_CaCO3_kg= 0.10
+    costo_CaCO3_kg= cosca_v #0.10
     #densidad y espesor de la capa de suelo de inter�s
-    densidad=1200 #kg/m3
-    espesor=0.2 #m
+    densidad= densi_v #1200 kg/m3
+    espesor= espes_v # 0.2 m
     #producción estimada
-    produccion_kg_ha=1800 #40 quintales/hectarea = 1800 kg/hectarea
+    produccion_kg_ha=produ_v #1800 40 quintales/hectarea = 1800 kg/hectarea
     #densidad (arboles por hectarea)
-    arb_ha=3000
+    arb_ha=arbha_v #3000
 
     fraccion_aprovechada=1
     fraccion_existente_disponible={'Ca':1,
@@ -216,40 +321,40 @@ e4_ca_v, e4_mg_v, e4_k_v, e4_n_v, e4_p_v, e4_fe_v, e4_mn_v, e4_zn_v, e4_cu_v, e4
     "micromix_forte":{"N":3,"P2O5":3,"K2O":0,"CaO":2,"MgO":4,"SO4":15,
     "Zn":12,"B":1.5,"Fe":3,"Mn":1,"Cu":1},
 
-    "ABONO1":{"N":0,"P2O5":0,"K2O":0,"CaO":0,"MgO":0,"SO4":0,
-    "Zn":0,"B":0,"Fe":0,"Mn":0,"Cu":0},
+    "ABONO1":{"N":a1_n_v,"P2O5":a1_p_v,"K2O":a1_k_v,"CaO":a1_ca_v,"MgO":a1_mg_v,"SO4":a1_s_v,
+    "Zn":a1_zn_v,"B":a1_b_v,"Fe":a1_fe_v,"Mn":a1_mn_v,"Cu":a1_cu_v},
 
-    "ABONO2":{"N":0,"P2O5":0,"K2O":0,"CaO":0,"MgO":0,"SO4":0,
-    "Zn":0,"B":0,"Fe":0,"Mn":0,"Cu":0},
+    "ABONO2":{"N":a2_n_v,"P2O5":a2_p_v,"K2O":a2_k_v,"CaO":a2_ca_v,"MgO":a2_mg_v,"SO4":a2_s_v,
+    "Zn":a2_zn_v,"B":a2_b_v,"Fe":a2_fe_v,"Mn":a2_mn_v,"Cu":a2_cu_v},
 
-    "ABONO3":{"N":0,"P2O5":0,"K2O":0,"CaO":0,"MgO":0,"SO4":0,
-    "Zn":0,"B":0,"Fe":0,"Mn":0,"Cu":0}
+    "ABONO3":{"N":a3_n_v,"P2O5":a3_p_v,"K2O":a3_k_v,"CaO":a3_ca_v,"MgO":a3_mg_v,"SO4":a3_s_v,
+    "Zn":a3_zn_v,"B":a3_b_v,"Fe":a3_fe_v,"Mn":a3_mn_v,"Cu":a3_cu_v}
 
     }
     a = normalizar_composicion_de_abono(a)
 
     costo_kg={
-    "Rega":000.8,
-    "Polisulfato":000.58, 
-    "High_Complete":000.6,
-    "Nitrabor":00.7,
-    "High_K":000.6,
-    "Granumax_S":000.5,
-    "Hydran":000.6,
-    "Colono_15-5-20":000.6, 
-    "DAP":000.5,#2020 IDEAL JMGA
-    "kicerita":000.36,#2020 
-    "dolomita":000.36,
-    "micromix_forte":0.8,
-    "enmienda1":0.32,#IDEAL JMGA
-    "KCL":000.42,#2020 IDEAL JMGA
-    "KMAG":0.59,#2020 IDEAL JMGA
-    'Urea x':0.46,#2020 IDEAL JMGA
-    'Boro gra 9.9B':016.25,#IDEAL JMGA
-    'Magnesamon':000.37,#IDEAL JMGA
-    'ABONO1':1,
-    'ABONO2':1,
-    "ABONO3":1
+    "Rega":rega_v, #0.8
+    "Polisulfato":polisulfato_v, #0.58
+    "High_Complete":high_complete_v, #0.6
+    "Nitrabor":nitrabor_v, #0.7
+    "High_K":high_k_v, #0.6
+    "Granumax_S":granumax_s_v, #0.5
+    "Hydran":hydran_v, #0.6
+    "Colono_15-5-20":colono_v, #0.6
+    "DAP":dap_v, #0.5   2020 IDEAL JMGA
+    "kicerita":kicerita_v,#0.36 2020 
+    "dolomita":dolomita_v, #0.36
+    "micromix_forte":micromix_forte_v, #0.8
+    "enmienda1":enmienda1_v, #0.32  IDEAL JMGA
+    "KCL":kcl_v, #0.42  2020 IDEAL JMGA
+    "KMAG":kmag_v, #0.59   2020 IDEAL JMGA
+    'Urea x':urea_v, #0.46 2020 IDEAL JMGA
+    'Boro gra 9.9B':boro_v, #16.25    IDEAL JMGA
+    'Magnesamon':magnesamon_v, #0.37   IDEAL JMGA
+    'ABONO1':a1_cos_v,
+    'ABONO2':a2_cos_v,
+    "ABONO3":a3_cos_v
     }
     #({Cerisola 2015 universidad nacional de la plata})
     #espinosa y molina 1999 International plant nutrition institute
@@ -316,18 +421,18 @@ e4_ca_v, e4_mg_v, e4_k_v, e4_n_v, e4_p_v, e4_fe_v, e4_mn_v, e4_zn_v, e4_cu_v, e4
     #DOSIFICACIO'N de nutrientes necesarios para mantenimiento y producci�n 
     #en 4 etapas                 
     fraccion_consumo = {
-    'Ca':[0.35,0.30,0.15,0.20],
-    'Mg':[0.35,0.35,0.15,0.15],
-    'K':[0.05,0.05,0.45,0.45],
-    'P':[0.25,0.25,0.25,0.25],
-    'N':[0.25,0.35,0.20,0.20], 
-    'Fe':[0.25,0.25,0.25,0.25],
-    'Mn':[0.05,0.25,0.35,0.35],
-    'Cu':[0.05,0.25,0.35,0.35],
-    'Zn':[0.05,0.25,0.35,0.35],
-    'OM':[0.05,0.25,0.35,0.35], 
-    'S':[0.25,0.25,0.25,0.25], 
-    'B':[0.05,0.25,0.35,0.35]   
+    'Ca':[e1_ca_v,e2_ca_v,e3_ca_v,e4_ca_v], #0.35,0.30,0.15,0.20
+    'Mg':[e1_mg_v,e2_mg_v,e3_mg_v,e4_mg_v], #0.35,0.35,0.15,0.15
+    'K':[e1_k_v,e2_k_v,e3_k_v,e4_k_v],  #0.05,0.05,0.45,0.45
+    'N':[e1_n_v,e2_n_v,e3_n_v,e4_n_v],  #0.25,0.35,0.20,0.20
+    'P':[e1_p_v,e2_p_v,e3_p_v,e4_p_v],  #0.25,0.25,0.25,0.25
+    'Fe':[e1_fe_v,e2_fe_v,e3_fe_v,e4_fe_v], #0.25,0.25,0.25,0.25
+    'Mn':[e1_mn_v,e2_mn_v,e3_mn_v,e4_mn_v], #0.05,0.25,0.35,0.35
+    'Cu':[e1_cu_v,e2_cu_v,e3_cu_v,e4_cu_v], #0.05,0.25,0.35,0.35
+    'Zn':[e1_zn_v,e2_zn_v,e3_zn_v,e4_zn_v], #0.05,0.25,0.35,0.35
+    'S':[e1_s_v,e2_s_v,e3_s_v,e4_s_v],  #0.25,0.25,0.25,0.25
+    'B':[e1_b_v,e2_b_v,e3_b_v,e4_b_v],   #0.05,0.25,0.35,0.35
+    'OM':[0.05,0.25,0.35,0.35] #0.05,0.25,0.35,0.35
     }
     
     #DOSIFICACIO'N de nutrientes necesarios para construcci�n de suelo 
@@ -543,7 +648,9 @@ e4_ca_v, e4_mg_v, e4_k_v, e4_n_v, e4_p_v, e4_fe_v, e4_mn_v, e4_zn_v, e4_cu_v, e4
         print("lista 3= ", lista3)
         print("lista 4= ", lista4)
         print("lista 5= ", lista5)
-        print("prueba= ", mgda)
+        print("prueba 1= ", a1_nom_v, a1_cos_v, a1_ca_v, a1_mg_v, a1_k_v, a1_n_v, a1_p_v, a1_fe_v, a1_mn_v, a1_cu_v, a1_zn_v, a1_s_v,a1_b_v)
+        print("prueba 2= ", a2_nom_v, a2_cos_v, a2_ca_v, a2_mg_v, a2_k_v, a2_n_v, a2_p_v, a2_fe_v, a2_mn_v, a2_cu_v, a2_zn_v, a2_s_v,a2_b_v)
+        print("prueba 3= ", a3_nom_v, a3_cos_v, a3_ca_v, a3_mg_v, a3_k_v, a3_n_v, a3_p_v, a3_fe_v, a3_mn_v, a3_cu_v, a3_zn_v, a3_s_v,a3_b_v)
 
     main()
 
@@ -554,8 +661,8 @@ e4_ca_v, e4_mg_v, e4_k_v, e4_n_v, e4_p_v, e4_fe_v, e4_mn_v, e4_zn_v, e4_cu_v, e4
 # a1_nom_v, a1_cos_v, a1_ca_v, a1_mg_v, a1_k_v, a1_n_v, a1_p_v, a1_fe_v, a1_mn_v, a1_cu_v, a1_zn_v, a1_s_v,a1_b_v,
 # a2_nom_v, a2_cos_v, a2_ca_v, a2_mg_v, a2_k_v, a2_n_v, a2_p_v, a2_fe_v, a2_mn_v, a2_cu_v, a2_zn_v, a2_s_v,a2_b_v,
 # a3_nom_v, a3_cos_v, a3_ca_v, a3_mg_v, a3_k_v, a3_n_v, a3_p_v, a3_fe_v, a3_mn_v, a3_cu_v, a3_zn_v, a3_s_v,a3_b_v,
-# cosca_v, densi_v, espes_v, produ_v, 
-# arbha_v, rega_v, polisulfato_v,high_complete_v, nitrabor_v, high_k_v,granumax_s_v,
+# cosca_v, densi_v, espes_v, produ_v, arbha_v,
+# rega_v, polisulfato_v,high_complete_v, nitrabor_v, high_k_v,granumax_s_v,
 # hydran_v, colono_v, dap_v, kicerita_v, dolomita_v, micromix_forte_v, enmienda1_v, kcl_v, kmag_v, urea_v,boro_v, magnesamon_v,
 # e1_ca_v, e1_mg_v, e1_k_v, e1_n_v, e1_p_v, e1_fe_v, e1_mn_v, e1_zn_v, e1_cu_v, e1_s_v, e1_b_v,
 # e2_ca_v, e2_mg_v, e2_k_v, e2_n_v, e2_p_v, e2_fe_v, e2_mn_v, e2_zn_v, e2_cu_v, e2_s_v, e2_b_v,
@@ -563,11 +670,11 @@ e4_ca_v, e4_mg_v, e4_k_v, e4_n_v, e4_p_v, e4_fe_v, e4_mn_v, e4_zn_v, e4_cu_v, e4
 # e4_ca_v, e4_mg_v, e4_k_v, e4_n_v, e4_p_v, e4_fe_v, e4_mn_v, e4_zn_v, e4_cu_v, e4_s_v, e4_b_v
 #8.57,1.62,0.60,10.8,32.65,178.38,23.85,15.35,23.30,0,0,
 
-# intdata(0.9,0.16,0.06,1.1,3.3,18,2.4,1.5,2.3,0,0,
-# 100,1,0,0,0,0,0,0,0,0,0,0,0,200,1,0,0,0,0,0,0,0,0,0,0,0,300,1,0,0,0,0,0,0,0,0,0,0,0,
-# 0.10, 1200, 0.2, 1800, 3000, 
-# 0.8,0.58,0.6,0.7,0.6,0.5,0.6,0.6,0.5,0.36,0.36,0.8,0.32,0.42,0.59,0.46,16.25,0.37,
-# 0.35,0.35,0.05,0.25,0.25,0.25,0.05,0.05,0.05,0.25,0.05,
-# 0.30,0.35,0.05,0.25,0.35,0.25,0.25,0.25,0.25,0.25,0.25,
-# 0.15,0.15,0.45,0.25,0.20,0.25,0.35,0.35,0.35,0.25,0.35,
-# 0.20,0.15,0.45,0.25,0.20,0.25,0.35,0.35,0.35,0.25,0.35)
+intdata(0.9,0.16,0.06,1.1,3.3,18,2.4,1.5,2.3,0,0,
+100,1,0,0,0,0,0,0,0,0,0,0,0,200,1,0,0,0,0,0,0,0,0,0,0,0,300,1,0,0,0,0,0,0,0,0,0,0,0,
+0.10, 1200, 0.2, 1800, 3000, 
+0.8,0.58,0.6,0.7,0.6,0.5,0.6,0.6,0.5,0.36,0.36,0.8,0.32,0.42,0.59,0.46,16.25,0.37,
+0.35,0.35,0.05,0.25,0.25,0.25,0.05,0.05,0.05,0.25,0.05,
+0.30,0.35,0.05,0.35,0.25,0.25,0.25,0.25,0.25,0.25,0.25,
+0.15,0.15,0.45,0.20,0.25,0.25,0.35,0.35,0.35,0.25,0.35,
+0.20,0.15,0.45,0.20,0.25,0.25,0.35,0.35,0.35,0.25,0.35)
