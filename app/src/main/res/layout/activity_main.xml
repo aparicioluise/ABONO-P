@@ -7,9 +7,9 @@ android:layout_height="match_parent"
 android:background="@color/backgraund1"
 tools:context="expanse.publico.abono.MainActivity">
 
-<android.support.constraint.ConstraintLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:scrollbarAlwaysDrawHorizontalTrack="true"
     android:background="@color/backgraund1">
 
@@ -42,282 +42,312 @@ tools:context="expanse.publico.abono.MainActivity">
         android:textColor="@android:color/background_light"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tl_b" />
+        app:layout_constraintTop_toBottomOf="@+id/tl_b"
+        android:focusable="true" />
 
-    <EditText
-        android:id="@+id/caet"
-        android:layout_width="wrap_content"
+    <TableLayout
+        android:id="@+id/tl_f"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="150dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        android:textSize="14sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
-    <TextView
-        android:id="@+id/textView_caet"
-        style="@style/Widget.AppCompat.TextView.SpinnerItem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="162dp"
-        android:text="@string/ca_cmol_kg_suelo"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TableRow>
 
-    <EditText
-        android:id="@+id/mget"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="200dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+            <TextView
+                android:id="@+id/textView_101"
+                style="@style/Widget.AppCompat.TextView.SpinnerItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="4"
+                android:text="A continuación ingrese los resultados de su estudio de suelo:"
+                android:textColor="@color/colorAccent2"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
 
-    <TextView
-        android:id="@+id/textView_mget"
-        style="@style/Widget.AppCompat.TextView.SpinnerItem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="212dp"
-        android:text="Mg (cmol+/kg_suelo)="
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TableRow>
 
-    <EditText
-        android:id="@+id/ket"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="250dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+            <TextView
+                android:id="@+id/textView_caet"
+                style="@style/Widget.AppCompat.TextView.SpinnerItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="1"
+                android:gravity="right"
+                android:text="@string/ca_cmol_kg_suelo"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView_ket"
-        style="@style/Widget.AppCompat.TextView.SpinnerItem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="262dp"
-        android:text="K (cmol+/kg_suelo)="
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <EditText
+                android:id="@+id/caet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="1"
+                android:autofillHints=""
+                android:ems="4"
+                android:inputType="numberDecimal"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/net"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="300dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+        </TableRow>
 
-    <TextView
-        android:id="@+id/textView_net"
-        style="@style/Widget.AppCompat.TextView.SpinnerItem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="312dp"
-        android:text="N (mg/l)="
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TableRow>
 
-    <EditText
-        android:id="@+id/pet"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="350dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+            <TextView
+                android:id="@+id/textView_mget"
+                style="@style/Widget.AppCompat.TextView.SpinnerItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="1"
+                android:text="Mg (cmol+/kg_suelo)="
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView_pet"
-        style="@style/Widget.AppCompat.TextView.SpinnerItem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="362dp"
-        android:text="P (mg/kg_suelo)="
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <EditText
+                android:id="@+id/mget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="1"
+                android:autofillHints=""
+                android:ems="4"
+                android:inputType="numberDecimal"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
 
-    <EditText
-        android:id="@+id/feet"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="400dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+        <TableRow>
 
-    <TextView
-        android:id="@+id/textView_feet"
-        style="@style/Widget.AppCompat.TextView.SpinnerItem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="412dp"
-        android:text="Fe (mg/kg_suelo)="
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/textView_ket"
+                style="@style/Widget.AppCompat.TextView.SpinnerItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="1"
+                android:gravity="right"
+                android:text="K (cmol+/kg_suelo)="
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/mnet"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="450dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+            <EditText
+                android:id="@+id/ket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="1"
+                android:autofillHints=""
+                android:ems="4"
+                android:inputType="numberDecimal"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
 
-    <TextView
-        android:id="@+id/textView_mnet"
-        style="@style/Widget.AppCompat.TextView.SpinnerItem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="462dp"
-        android:text="Mn (mg/kg_suelo)="
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TableRow>
 
-    <EditText
-        android:id="@+id/cuet"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="500dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+            <TextView
+                android:id="@+id/textView_net"
+                style="@style/Widget.AppCompat.TextView.SpinnerItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="1"
+                android:gravity="right"
+                android:text="N (mg/l)="
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView_cuet"
-        style="@style/Widget.AppCompat.TextView.SpinnerItem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="512dp"
-        android:text="Cu (mg/kg_suelo)="
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <EditText
+                android:id="@+id/net"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="1"
+                android:autofillHints=""
+                android:ems="4"
+                android:inputType="numberDecimal"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
 
-    <EditText
-        android:id="@+id/znet"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="550dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+        <TableRow>
 
-    <TextView
-        android:id="@+id/textView_znet"
-        style="@style/Widget.AppCompat.TextView.SpinnerItem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="562dp"
-        android:text="Zn (mg/kg_suelo)="
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/textView_pet"
+                style="@style/Widget.AppCompat.TextView.SpinnerItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="P (mg/kg_suelo)="
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <EditText
+                android:id="@+id/pet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:ems="4"
+                android:inputType="numberDecimal"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+        <TableRow>
 
-    <EditText
-        android:id="@+id/set"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="600dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+            <TextView
+                android:id="@+id/textView_feet"
+                style="@style/Widget.AppCompat.TextView.SpinnerItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="Fe (mg/kg_suelo)="
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <EditText
+                android:id="@+id/feet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:ems="4"
+                android:inputType="numberDecimal"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+        <TableRow>
 
-    <TextView
-        android:id="@+id/textView_set"
-        style="@style/Widget.AppCompat.TextView.SpinnerItem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="612dp"
-        android:text="S (%)="
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/textView_mnet"
+                style="@style/Widget.AppCompat.TextView.SpinnerItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="Mn (mg/kg_suelo)="
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <EditText
+                android:id="@+id/mnet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:ems="4"
+                android:inputType="numberDecimal"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+        <TableRow>
 
-    <EditText
-        android:id="@+id/bet"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="650dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+            <TextView
+                android:id="@+id/textView_cuet"
+                style="@style/Widget.AppCompat.TextView.SpinnerItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="Cu (mg/kg_suelo)="
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <EditText
+                android:id="@+id/cuet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:ems="4"
+                android:inputType="numberDecimal"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+        <TableRow>
 
-    <TextView
-        android:id="@+id/textView_bet"
-        style="@style/Widget.AppCompat.TextView.SpinnerItem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="652dp"
-        android:text="B (%)="
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/textView_znet"
+                style="@style/Widget.AppCompat.TextView.SpinnerItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="Zn (mg/kg_suelo)="
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <EditText
+                android:id="@+id/znet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:ems="4"
+                android:inputType="numberDecimal"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:id="@+id/textView_set"
+                style="@style/Widget.AppCompat.TextView.SpinnerItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="S (%)="
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <EditText
+                android:id="@+id/set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:ems="4"
+                android:inputType="numberDecimal"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_bet"
+                style="@style/Widget.AppCompat.TextView.SpinnerItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="B (%)="
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <EditText
+                android:id="@+id/bet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:ems="4"
+                android:inputType="numberDecimal"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+
+        <TableRow>
+
+        </TableRow>
+
+
+
+    </TableLayout>
+
+
 
     <ProgressBar
         android:id="@+id/Bar"
@@ -344,11 +374,11 @@ tools:context="expanse.publico.abono.MainActivity">
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="16sp"
         android:justificationMode="inter_word"
         android:text="@string/titulo"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="18sp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -382,7 +412,7 @@ tools:context="expanse.publico.abono.MainActivity">
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bet">
+        app:layout_constraintTop_toBottomOf="@+id/tl_f">
 
         <TableRow>
 
@@ -391,21 +421,22 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_span="2"
-                android:gravity="center"
+                android:gravity="center_horizontal|left"
                 android:text="Ingrese los siguientes datos del área abonada:"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textColor="@android:color/background_dark"
-                android:textSize="18sp" />
+                android:textColor="@color/colorAccent2"
+                android:textSize="16sp" />
         </TableRow>
 
         <TableRow>
+
             <TextView
                 android:id="@+id/textView40"
-                android:layout_marginHorizontal="3dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
                 android:gravity="right"
-                android:text="Costo CaCO3"
+                android:text="Costo CaCO3="
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textColor="@android:color/background_dark"
                 android:textSize="14sp" />
@@ -503,13 +534,14 @@ tools:context="expanse.publico.abono.MainActivity">
         </TableRow>
 
         <TableRow>
+
             <TextView
                 android:id="@+id/textView44"
-                android:layout_marginHorizontal="3dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
                 android:gravity="right"
-                android:text="Producción estimada="
+                android:text="Árboles por hectárea="
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textColor="@android:color/background_dark"
                 android:textSize="14sp" />
@@ -527,16 +559,6 @@ tools:context="expanse.publico.abono.MainActivity">
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </TableRow>
-
-
-
-
-
-
-
-
-
-
 
     </TableLayout>
 
@@ -561,11 +583,11 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_span="2"
-                android:gravity="center"
+                android:gravity="center|left"
                 android:text="Ingrese los precios de los siguientes abonos:"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textColor="@android:color/background_dark"
-                android:textSize="18sp" />
+                android:textColor="@color/colorAccent2"
+                android:textSize="16sp" />
         </TableRow>
 
         <TableRow>
@@ -1057,11 +1079,11 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_span="5"
-                android:gravity="center"
+                android:gravity="center|left"
                 android:text="Ingrese los porcentajes para la ejecución de cuatro etapas de dosificación de la fracción de consumo:"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textColor="@android:color/background_dark"
-                android:textSize="18sp" />
+                android:textColor="@color/colorAccent2"
+                android:textSize="16sp" />
         </TableRow>
 
         <TableRow>
@@ -1139,22 +1161,23 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:text="0.25"
+                android:text="1"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
             <EditText
                 android:id="@+id/e2_ca"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
-                android:text="0.25"
-                android:textSize="14sp"
+                android:ems="4"
                 android:inputType="numberDecimal"
+                android:text="0"
+                android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1165,9 +1188,9 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:text="0.25"
+                android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -1178,9 +1201,9 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:text="0.25"
+                android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -1204,22 +1227,23 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:text="0.25"
+                android:text="1"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
             <EditText
                 android:id="@+id/e2_mg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
-                android:text="0.25"
-                android:textSize="14sp"
+                android:ems="4"
                 android:inputType="numberDecimal"
+                android:text="0"
+                android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1230,9 +1254,9 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:text="0.25"
+                android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -1243,9 +1267,9 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:text="0.25"
+                android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -1269,22 +1293,23 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:text="0.25"
+                android:text="1"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
             <EditText
                 android:id="@+id/e2_k"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
-                android:text="0.25"
-                android:textSize="14sp"
+                android:ems="4"
                 android:inputType="numberDecimal"
+                android:text="0"
+                android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1295,9 +1320,9 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:text="0.25"
+                android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -1308,9 +1333,9 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:text="0.25"
+                android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -1334,22 +1359,23 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:text="0.25"
+                android:text="1"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
             <EditText
                 android:id="@+id/e2_n"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
-                android:text="0.25"
-                android:textSize="14sp"
+                android:ems="4"
                 android:inputType="numberDecimal"
+                android:text="0"
+                android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1360,9 +1386,9 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:text="0.25"
+                android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -1373,9 +1399,9 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:text="0.25"
+                android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -1400,22 +1426,23 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:text="0.25"
+                android:text="1"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
             <EditText
                 android:id="@+id/e2_p"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
-                android:text="0.25"
-                android:textSize="14sp"
+                android:ems="4"
                 android:inputType="numberDecimal"
+                android:text="0"
+                android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1426,9 +1453,9 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:text="0.25"
+                android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -1439,9 +1466,9 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:text="0.25"
+                android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -1465,22 +1492,23 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:text="0.25"
+                android:text="1"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
             <EditText
                 android:id="@+id/e2_fe"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
-                android:text="0.25"
-                android:textSize="14sp"
+                android:ems="4"
                 android:inputType="numberDecimal"
+                android:text="0"
+                android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1491,9 +1519,9 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:text="0.25"
+                android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -1504,9 +1532,9 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:text="0.25"
+                android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -1530,25 +1558,25 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:text="0.25"
+                android:text="1"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
             <EditText
                 android:id="@+id/e2_mn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
-                android:text="0.25"
-                android:textSize="14sp"
+                android:ems="4"
                 android:inputType="numberDecimal"
+                android:text="0"
+                android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
 
             <EditText
                 android:id="@+id/e3_mn"
@@ -1556,9 +1584,9 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:text="0.25"
+                android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -1569,9 +1597,9 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:text="0.25"
+                android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -1595,22 +1623,23 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:text="0.25"
+                android:text="1"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
             <EditText
                 android:id="@+id/e2_cu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
-                android:text="0.25"
-                android:textSize="14sp"
+                android:ems="4"
                 android:inputType="numberDecimal"
+                android:text="0"
+                android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1621,9 +1650,9 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:text="0.25"
+                android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -1634,9 +1663,9 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:text="0.25"
+                android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -1659,22 +1688,23 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:text="0.25"
+                android:text="1"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
             <EditText
                 android:id="@+id/e2_zn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
-                android:text="0.25"
-                android:textSize="14sp"
+                android:ems="4"
                 android:inputType="numberDecimal"
+                android:text="0"
+                android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1684,9 +1714,9 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:text="0.25"
+                android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -1697,9 +1727,9 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:text="0.25"
+                android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -1723,33 +1753,35 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:text="0.25"
+                android:text="1"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
             <EditText
                 android:id="@+id/e2_s"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
-                android:text="0.25"
-                android:textSize="14sp"
+                android:ems="4"
                 android:inputType="numberDecimal"
+                android:text="0"
+                android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
             <EditText
                 android:id="@+id/e3_s"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:text="0.25"
+                android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -1760,9 +1792,9 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:text="0.25"
+                android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -1786,22 +1818,23 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:text="0.25"
+                android:text="1"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
             <EditText
                 android:id="@+id/e2_b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
-                android:text="0.25"
-                android:textSize="14sp"
+                android:ems="4"
                 android:inputType="numberDecimal"
+                android:text="0"
+                android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1812,9 +1845,9 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:text="0.25"
+                android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -1825,9 +1858,9 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="5"
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:text="0.25"
+                android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -1862,7 +1895,7 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:text="¿Desea agregar su configuración de abonos?"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textColor="@android:color/background_dark"
-                android:textSize="18sp" />
+                android:textSize="16sp" />
         </TableRow>
 
         <TableRow>
@@ -1896,16 +1929,15 @@ tools:context="expanse.publico.abono.MainActivity">
     </TableLayout>
 
     <TableLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tl_b"
         android:visibility="invisible"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="0dp"
-
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="24dp"
         app:layout_constraintTop_toBottomOf="@+id/tl_a">
 
         <TableRow>
@@ -1919,7 +1951,7 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:text="A continuación ingrese los valores de su abono:"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textColor="@color/colorAccent2"
-                android:textSize="18sp" />
+                android:textSize="16sp" />
         </TableRow>
 
         <TableRow>
@@ -1945,7 +1977,7 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:text="ABONO 1"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textColor="@color/colorPrimaryDark"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/textView14"
@@ -1956,7 +1988,7 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:text="ABONO 2"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textColor="@color/colorPrimaryDark"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/textView15"
@@ -1967,7 +1999,7 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:text="ABONO 3"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textColor="@color/colorPrimaryDark"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
         </TableRow>
 
@@ -1991,9 +2023,9 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="6"
+                android:ems="4"
                 android:text="A1"
-                android:textSize="14sp"
+                android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -2003,9 +2035,9 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="6"
+                android:ems="4"
                 android:text="A2"
-                android:textSize="14sp"
+                android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -2015,9 +2047,9 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="6"
+                android:ems="4"
                 android:text="A3"
-                android:textSize="14sp"
+                android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -2042,7 +2074,7 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="6"
+                android:ems="4"
                 android:inputType="numberDecimal"
                 android:text="1"
                 android:textSize="14sp"
@@ -2055,7 +2087,7 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="6"
+                android:ems="4"
                 android:inputType="numberDecimal"
                 android:text="1"
                 android:textSize="14sp"
@@ -2068,7 +2100,7 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="6"
+                android:ems="4"
                 android:inputType="numberDecimal"
                 android:text="1"
                 android:textSize="14sp"
@@ -2095,10 +2127,10 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="6"
+                android:ems="4"
+                android:inputType="numberDecimal"
                 android:text="0"
                 android:textSize="14sp"
-                android:inputType="numberDecimal"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -2108,9 +2140,9 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="6"
-                android:text="0"
+                android:ems="4"
                 android:inputType="numberDecimal"
+                android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -2121,8 +2153,8 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:ems="6"
                 android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -2149,10 +2181,10 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="6"
+                android:ems="4"
+                android:inputType="numberDecimal"
                 android:text="0"
                 android:textSize="14sp"
-                android:inputType="numberDecimal"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -2162,9 +2194,9 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="6"
-                android:text="0"
+                android:ems="4"
                 android:inputType="numberDecimal"
+                android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -2175,8 +2207,8 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:ems="6"
                 android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -2203,10 +2235,10 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="6"
+                android:ems="4"
+                android:inputType="numberDecimal"
                 android:text="0"
                 android:textSize="14sp"
-                android:inputType="numberDecimal"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -2216,9 +2248,9 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="6"
-                android:text="0"
+                android:ems="4"
                 android:inputType="numberDecimal"
+                android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -2229,8 +2261,8 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:ems="6"
                 android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -2256,10 +2288,10 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="6"
+                android:ems="4"
+                android:inputType="numberDecimal"
                 android:text="0"
                 android:textSize="14sp"
-                android:inputType="numberDecimal"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -2269,9 +2301,9 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="6"
-                android:text="0"
+                android:ems="4"
                 android:inputType="numberDecimal"
+                android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -2282,8 +2314,8 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:ems="6"
                 android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -2309,10 +2341,10 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="6"
+                android:ems="4"
+                android:inputType="numberDecimal"
                 android:text="0"
                 android:textSize="14sp"
-                android:inputType="numberDecimal"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -2322,9 +2354,9 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="6"
-                android:text="0"
+                android:ems="4"
                 android:inputType="numberDecimal"
+                android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -2335,8 +2367,8 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:ems="6"
                 android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -2362,10 +2394,10 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="6"
+                android:ems="4"
+                android:inputType="numberDecimal"
                 android:text="0"
                 android:textSize="14sp"
-                android:inputType="numberDecimal"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -2375,9 +2407,9 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="6"
-                android:text="0"
+                android:ems="4"
                 android:inputType="numberDecimal"
+                android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -2388,8 +2420,8 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:ems="6"
                 android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -2415,10 +2447,10 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="6"
+                android:ems="4"
+                android:inputType="numberDecimal"
                 android:text="0"
                 android:textSize="14sp"
-                android:inputType="numberDecimal"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -2428,9 +2460,9 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="6"
-                android:text="0"
+                android:ems="4"
                 android:inputType="numberDecimal"
+                android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -2441,8 +2473,8 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:ems="6"
                 android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -2468,10 +2500,10 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="6"
+                android:ems="4"
+                android:inputType="numberDecimal"
                 android:text="0"
                 android:textSize="14sp"
-                android:inputType="numberDecimal"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -2481,9 +2513,9 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="6"
-                android:text="0"
+                android:ems="4"
                 android:inputType="numberDecimal"
+                android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -2494,8 +2526,8 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:ems="6"
                 android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -2521,10 +2553,10 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="6"
+                android:ems="4"
+                android:inputType="numberDecimal"
                 android:text="0"
                 android:textSize="14sp"
-                android:inputType="numberDecimal"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -2534,9 +2566,9 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="6"
-                android:text="0"
+                android:ems="4"
                 android:inputType="numberDecimal"
+                android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -2547,8 +2579,8 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:ems="6"
                 android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -2574,10 +2606,10 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="6"
+                android:ems="4"
+                android:inputType="numberDecimal"
                 android:text="0"
                 android:textSize="14sp"
-                android:inputType="numberDecimal"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -2587,9 +2619,9 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="6"
-                android:text="0"
+                android:ems="4"
                 android:inputType="numberDecimal"
+                android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -2600,8 +2632,8 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:ems="6"
                 android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -2627,10 +2659,10 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="6"
+                android:ems="4"
+                android:inputType="numberDecimal"
                 android:text="0"
                 android:textSize="14sp"
-                android:inputType="numberDecimal"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -2640,9 +2672,9 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
-                android:ems="6"
-                android:text="0"
+                android:ems="4"
                 android:inputType="numberDecimal"
+                android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -2653,8 +2685,8 @@ tools:context="expanse.publico.abono.MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:autofillHints=""
+                android:ems="4"
                 android:inputType="numberDecimal"
-                android:ems="6"
                 android:text="0"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -2664,5 +2696,5 @@ tools:context="expanse.publico.abono.MainActivity">
     </TableLayout>
 
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

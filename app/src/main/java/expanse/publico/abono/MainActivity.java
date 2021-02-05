@@ -2,7 +2,7 @@ package expanse.publico.abono;
 
 import android.os.AsyncTask;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -18,8 +18,6 @@ import android.widget.Toast;
 import com.chaquo.python.PyObject;
 import com.chaquo.python.Python;
 import com.chaquo.python.android.AndroidPlatform;
-
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -277,6 +275,333 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
 
+                if(cosca.getText().toString().isEmpty()){
+                    cosca.setText("0.10");
+                }
+                if(densi.getText().toString().isEmpty()){
+                    densi.setText("1200");
+                }
+                if(espes.getText().toString().isEmpty()){
+                    espes.setText("0.2");
+                }
+                if(produ.getText().toString().isEmpty()){
+                    produ.setText("1800");
+                }
+                if(arbha.getText().toString().isEmpty()){
+                    arbha.setText("3000");
+                }
+
+                if(c_rega.getText().toString().isEmpty()){
+                    c_rega.setText("1");
+                }
+                if(c_polisulfato.getText().toString().isEmpty()){
+                    c_polisulfato.setText("1");
+                }
+                if(c_high_complete.getText().toString().isEmpty()){
+                    c_high_complete.setText("1");
+                }
+                if(c_nitrabor.getText().toString().isEmpty()){
+                    c_nitrabor.setText("1");
+                }
+                if(c_high_k.getText().toString().isEmpty()){
+                    c_high_k.setText("1");
+                }
+                if(c_granumax_s.getText().toString().isEmpty()){
+                    c_granumax_s.setText("1");
+                }
+                if(c_hydran.getText().toString().isEmpty()){
+                    c_hydran.setText("1");
+                }
+                if(c_colono_15_5_20.getText().toString().isEmpty()){
+                    c_colono_15_5_20.setText("1");
+                }
+                if(c_dap.getText().toString().isEmpty()){
+                    c_dap.setText("1");
+                }
+                if(c_kicerita.getText().toString().isEmpty()){
+                    c_kicerita.setText("1");
+                }
+                if(c_dolomita.getText().toString().isEmpty()){
+                    c_dolomita.setText("1");
+                }
+                if(c_micromix_forte.getText().toString().isEmpty()){
+                    c_micromix_forte.setText("1");
+                }
+                if(c_enmienda1.getText().toString().isEmpty()){
+                    c_enmienda1.setText("1");
+                }
+                if(c_kcl.getText().toString().isEmpty()){
+                    c_kcl.setText("1");
+                }
+                if(c_kmag.getText().toString().isEmpty()){
+                    c_kmag.setText("1");
+                }
+                if(c_urea_x.getText().toString().isEmpty()){
+                    c_urea_x.setText("1");
+                }
+                if(c_boro.getText().toString().isEmpty()){
+                    c_boro.setText("1");
+                }
+                if(c_Magnesamon.getText().toString().isEmpty()) {
+                    c_Magnesamon.setText("1");
+                }
+
+                if(e1_ca.getText().toString().isEmpty()) {
+                    e1_ca.setText("1");
+                }
+                if(e1_mg.getText().toString().isEmpty()) {
+                    e1_mg.setText("1");
+                }
+                if(e1_k.getText().toString().isEmpty()) {
+                    e1_k.setText("1");
+                }
+                if(e1_n.getText().toString().isEmpty()) {
+                    e1_n.setText("1");
+                }
+                if(e1_p.getText().toString().isEmpty()) {
+                    e1_p.setText("1");
+                }
+                if(e1_fe.getText().toString().isEmpty()) {
+                    e1_fe.setText("1");
+                }
+                if(e1_mn.getText().toString().isEmpty()) {
+                    e1_mn.setText("1");
+                }
+                if(e1_cu.getText().toString().isEmpty()) {
+                    e1_cu.setText("1");
+                }
+                if(e1_zn.getText().toString().isEmpty()) {
+                    e1_zn.setText("1");
+                }
+                if(e1_s.getText().toString().isEmpty()) {
+                    e1_s.setText("1");
+                }
+                if(e1_b.getText().toString().isEmpty()) {
+                    e1_b.setText("1");
+                }
+
+                if(e2_ca.getText().toString().isEmpty()) {
+                    e2_ca.setText("0");
+                }
+                if(e2_mg.getText().toString().isEmpty()) {
+                    e2_mg.setText("0");
+                }
+                if(e2_k.getText().toString().isEmpty()) {
+                    e2_k.setText("0");
+                }
+                if(e2_n.getText().toString().isEmpty()) {
+                    e2_n.setText("0");
+                }
+                if(e2_p.getText().toString().isEmpty()) {
+                    e2_p.setText("0");
+                }
+                if(e2_fe.getText().toString().isEmpty()) {
+                    e2_fe.setText("0");
+                }
+                if(e2_mn.getText().toString().isEmpty()) {
+                    e2_mn.setText("0");
+                }
+                if(e2_cu.getText().toString().isEmpty()) {
+                    e2_cu.setText("0");
+                }
+                if(e2_zn.getText().toString().isEmpty()) {
+                    e2_zn.setText("0");
+                }
+                if(e2_s.getText().toString().isEmpty()) {
+                    e2_s.setText("0");
+                }
+                if(e2_b.getText().toString().isEmpty()) {
+                    e2_b.setText("0");
+                }
+
+                if(e3_ca.getText().toString().isEmpty()) {
+                    e3_ca.setText("0");
+                }
+                if(e3_mg.getText().toString().isEmpty()) {
+                    e3_mg.setText("0");
+                }
+                if(e3_k.getText().toString().isEmpty()) {
+                    e3_k.setText("0");
+                }
+                if(e3_n.getText().toString().isEmpty()) {
+                    e3_n.setText("0");
+                }
+                if(e3_p.getText().toString().isEmpty()) {
+                    e3_p.setText("0");
+                }
+                if(e3_fe.getText().toString().isEmpty()) {
+                    e3_fe.setText("0");
+                }
+                if(e3_mn.getText().toString().isEmpty()) {
+                    e3_mn.setText("0");
+                }
+                if(e3_cu.getText().toString().isEmpty()) {
+                    e3_cu.setText("0");
+                }
+                if(e3_zn.getText().toString().isEmpty()) {
+                    e3_zn.setText("0");
+                }
+                if(e3_s.getText().toString().isEmpty()) {
+                    e3_s.setText("0");
+                }
+                if(e3_b.getText().toString().isEmpty()) {
+                    e3_b.setText("0");
+                }
+
+                if(e4_ca.getText().toString().isEmpty()) {
+                    e4_ca.setText("0");
+                }
+                if(e4_mg.getText().toString().isEmpty()) {
+                    e4_mg.setText("0");
+                }
+                if(e4_k.getText().toString().isEmpty()) {
+                    e4_k.setText("0");
+                }
+                if(e4_n.getText().toString().isEmpty()) {
+                    e4_n.setText("0");
+                }
+                if(e4_p.getText().toString().isEmpty()) {
+                    e4_p.setText("0");
+                }
+                if(e4_fe.getText().toString().isEmpty()) {
+                    e4_fe.setText("0");
+                }
+                if(e4_mn.getText().toString().isEmpty()) {
+                    e4_mn.setText("0");
+                }
+                if(e4_cu.getText().toString().isEmpty()) {
+                    e4_cu.setText("0");
+                }
+                if(e4_zn.getText().toString().isEmpty()) {
+                    e4_zn.setText("0");
+                }
+                if(e4_s.getText().toString().isEmpty()) {
+                    e4_s.setText("0");
+                }
+                if(e4_b.getText().toString().isEmpty()) {
+                    e4_b.setText("0");
+                }
+
+                if(a1_nom.getText().toString().isEmpty()) {
+                    a1_nom.setText(" A1");
+                }
+                if(a1_cos.getText().toString().isEmpty()) {
+                    a1_cos.setText("1");
+                }
+                if(a1_ca.getText().toString().isEmpty()) {
+                    a1_ca.setText("0");
+                }
+                if(a1_mg.getText().toString().isEmpty()) {
+                    a1_mg.setText("0");
+                }
+                if(a1_k.getText().toString().isEmpty()) {
+                    a1_k.setText("0");
+                }
+                if(a1_n.getText().toString().isEmpty()) {
+                    a1_n.setText("0");
+                }
+                if(a1_p.getText().toString().isEmpty()) {
+                    a1_p.setText("0");
+                }
+                if(a1_fe.getText().toString().isEmpty()) {
+                    a1_fe.setText("0");
+                }
+                if(a1_mn.getText().toString().isEmpty()) {
+                    a1_mn.setText("0");
+                }
+                if(a1_cu.getText().toString().isEmpty()) {
+                    a1_cu.setText("0");
+                }
+                if(a1_zn.getText().toString().isEmpty()) {
+                    a1_zn.setText("0");
+                }
+                if(a1_s.getText().toString().isEmpty()) {
+                    a1_s.setText("0");
+                }
+                if(a1_b.getText().toString().isEmpty()) {
+                    a1_b.setText("0");
+                }
+
+                if(a2_nom.getText().toString().isEmpty()) {
+                    a2_nom.setText(" A2");
+                }
+                if(a2_cos.getText().toString().isEmpty()) {
+                    a2_cos.setText("1");
+                }
+                if(a2_ca.getText().toString().isEmpty()) {
+                    a2_ca.setText("0");
+                }
+                if(a2_mg.getText().toString().isEmpty()) {
+                    a2_mg.setText("0");
+                }
+                if(a2_k.getText().toString().isEmpty()) {
+                    a2_k.setText("0");
+                }
+                if(a2_n.getText().toString().isEmpty()) {
+                    a2_n.setText("0");
+                }
+                if(a2_p.getText().toString().isEmpty()) {
+                    a2_p.setText("0");
+                }
+                if(a2_fe.getText().toString().isEmpty()) {
+                    a2_fe.setText("0");
+                }
+                if(a2_mn.getText().toString().isEmpty()) {
+                    a2_mn.setText("0");
+                }
+                if(a2_cu.getText().toString().isEmpty()) {
+                    a2_cu.setText("0");
+                }
+                if(a2_zn.getText().toString().isEmpty()) {
+                    a2_zn.setText("0");
+                }
+                if(a2_s.getText().toString().isEmpty()) {
+                    a2_s.setText("0");
+                }
+                if(a2_b.getText().toString().isEmpty()) {
+                    a2_b.setText("0");
+                }
+
+                if(a3_nom.getText().toString().isEmpty()) {
+                    a3_nom.setText(" A3");
+                }
+                if(a3_cos.getText().toString().isEmpty()) {
+                    a3_cos.setText("1");
+                }
+                if(a3_ca.getText().toString().isEmpty()) {
+                    a3_ca.setText("0");
+                }
+                if(a3_mg.getText().toString().isEmpty()) {
+                    a3_mg.setText("0");
+                }
+                if(a3_k.getText().toString().isEmpty()) {
+                    a3_k.setText("0");
+                }
+                if(a3_n.getText().toString().isEmpty()) {
+                    a3_n.setText("0");
+                }
+                if(a3_p.getText().toString().isEmpty()) {
+                    a3_p.setText("0");
+                }
+                if(a3_fe.getText().toString().isEmpty()) {
+                    a3_fe.setText("0");
+                }
+                if(a3_mn.getText().toString().isEmpty()) {
+                    a3_mn.setText("0");
+                }
+                if(a3_cu.getText().toString().isEmpty()) {
+                    a3_cu.setText("0");
+                }
+                if(a3_zn.getText().toString().isEmpty()) {
+                    a3_zn.setText("0");
+                }
+                if(a3_s.getText().toString().isEmpty()) {
+                    a3_s.setText("0");
+                }
+                if(a3_b.getText().toString().isEmpty()) {
+                    a3_b.setText("0");
+                }
+
                 Btn.setBackgroundColor(getResources().getColor(R.color.rojo));
                 Btn.setEnabled(false);
                 Bar.setVisibility(View.VISIBLE);
@@ -287,14 +612,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
     }
 
     public class time extends AsyncTask<Void,Integer,Boolean> {
 
         @Override
         protected Boolean doInBackground(Void... voids) {
-
 
             // Obtener valor ingresado
 
@@ -444,7 +767,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void run() {
 
-                    // debe ser una cadena con 50 valores
+                    // debe ser una cadena con 117 valores
 
                     final PyObject intdata = pyobj.callAttr("intdata", cada, mgda, kda, nda, pda, feda, mnda, cuda, znda, sda, bda,
                             10, a1_cos_v, a1_ca_v, a1_mg_v, a1_k_v, a1_n_v, a1_p_v, a1_fe_v, a1_mn_v, a1_cu_v, a1_zn_v, a1_s_v,a1_b_v,

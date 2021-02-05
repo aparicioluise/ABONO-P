@@ -1,11 +1,19 @@
 <resources>
-    <string name="app_name">ABONO-dx</string>
+    <string name="app_name">ABONO-dX</string>
     <string name="hello_world_abono">Hello World ABONO!</string>
     <string name="button">Button</string>
     <string name="ca_cmol_kg_suelo">Ca (cmol+/kg_suelo)=</string>
-    <string name="titulo">
-        <br>Para determinar la combinación matemática que produce el mínimo costo, entre un grupo de fertilizantes;</br>
-        <br>Ingrese a continuación los resultados de su estudio de suelo:</br>
+    <string name="titulo">Esta aplicación utiliza un algoritmo para determinar la combinación matemática que produzca el costo más bajo para el proceso fertilización.
+        <br>
+        </br>
+        <br>Para el funcionamiento óptimo de la aplicación tome en cuenta las siguientes sugerencias:
+        </br>
+         <br>*Los valores que se encuentran en la sección de área abonada, son valores por defecto; si no conoce los valores de su tierra, no los modifique.
+             </br>
+        <br>*En la sección de precio de abonos, el valor por defecto es “uno” e indica que ese abono no será considerado para el cálculo. Solo se considerarán a los abonos en los que se haya ingresado un valor.
+             </br>
+        <br>*En la sección de fracción de consumo, se ofrece la posibilidad de dosificar en cuatro etapas; por defecto se establece solo una etapa.
+             </br>
     </string>
 
     <string name="nota"> NOTA IMPORTANTE: Estas no son recomendaciones agronómicas, son solo cálculos matemáticos basados en los datos introducidos a este Código, que pudiera servir como herramienta de cálculo durante las decisiones agronómicas</string>
